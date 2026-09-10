@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reaction Time Test — Measure Your Reflex Speed</title>
+<meta name="description" content="Free reaction time test. Click the moment the screen turns green. Get your average, best and worst reaction time across 5 rounds — all measured in your browser.">
+<link rel="canonical" href="https://yourdomain.com/reaction-time-test/">
+<link rel="alternate" hreflang="en" href="https://yourdomain.com/reaction-time-test/">
+<link rel="alternate" hreflang="es" href="https://yourdomain.com/es/reaction-time-test/">
+<link rel="alternate" hreflang="x-default" href="https://yourdomain.com/reaction-time-test/">
+<link rel="stylesheet" href="css/style.css">
+<script>try{var t=localStorage.getItem('mbt')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Reaction Time Test","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Browser-based reaction time measurement using visual stimulus."}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg class="brand-svg" viewBox="0 0 24 24" width="25.2" height="25.2" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="#fff"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="#fff"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="#7c3aed"/><circle cx="8.3" cy="17" r="1.2" fill="#7c3aed"/><circle cx="15.7" cy="17" r="1.2" fill="#7c3aed"/></g></g></svg></span><span>MouseBench</span></a>
+    <a class="lang-link" href="es/reaction-time-test.html" hreflang="es" aria-label="Español">Español</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Toggle light / dark theme">
+      <svg class="theme-icon" viewBox="0 0 24 24" width="26.62" height="26.62" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="var(--icon-mouse)"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="var(--icon-mouse)"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="var(--icon-mouse)" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="var(--icon-accent)"/><circle cx="8.3" cy="17" r="1.2" fill="var(--icon-accent)"/><circle cx="15.7" cy="17" r="1.2" fill="var(--icon-accent)"/></g></g></svg>
+    </button>
+    <button class="nav-toggle" id="navToggle" type="button" aria-haspopup="true" aria-expanded="false">Menu <span aria-hidden="true">⌄</span></button>
+    <nav class="nav-panel" id="navPanel" aria-label="All tools">
+      <div class="nav-group">Featured</div>
+      <a class="nav-link" href="aim-trainer.html"><span class="ico">🎯</span>Aim &amp; Memory Challenge</a>
+      <a class="nav-link" href="index.html"><span class="ico">⌂</span>Home</a>
+      <div class="nav-group">Mouse tests</div>
+      <a class="nav-link" href="mouse-button-test.html"><span class="ico">🖱️</span>Mouse Button Test</a>
+      <a class="nav-link" href="dpi-test.html"><span class="ico">📏</span>DPI Test</a>
+      <a class="nav-link" href="scroll-wheel-test.html"><span class="ico">🌀</span>Scroll Wheel Test</a>
+      <a class="nav-link" href="mouse-latency-test.html"><span class="ico">⚡</span>Mouse Latency Test</a>
+      <div class="nav-group">Speed &amp; reflexes</div>
+      <a class="nav-link" href="click-speed-test.html"><span class="ico">💥</span>Click Speed Test (CPS)</a>
+      <a class="nav-link" href="reaction-time-test.html"><span class="ico">⏱️</span>Reaction Time Test</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-zone">
+  <div class="container">
+    <div class="hero">
+      <span class="kicker">Reflex test</span>
+      <h1>Reaction Time Test</h1>
+      <p>Wait for the green, click instantly. Five rounds give you an average, your best, and your worst — with percentiles to judge yourself against.</p>
+    </div>
+
+    <div class="ad-slot leaderboard" data-ad-slot="RT_LEADERBOARD">Ad slot · Leaderboard (728×90)</div>
+
+    <div class="stage">
+      <div class="stage-title">
+        <h2>Reaction trial</h2>
+        <div class="muted small" id="rtRoundLabel">Round 1 of 5</div>
+      </div>
+
+      <div class="flash-zone idle" id="rtZone" role="button" tabindex="0" aria-label="Reaction time test area">
+        <div class="big" id="rtText">Click to start</div>
+        <div class="muted small" id="rtSub">The screen goes green randomly — click the moment it does.</div>
+      </div>
+
+      <div class="stats-row" style="margin-top:16px;">
+        <div class="stat"><span class="label">Average</span><span class="value" id="rtAvg">—</span></div>
+        <div class="stat"><span class="label">Best</span><span class="value" id="rtBest">—</span></div>
+        <div class="stat"><span class="label">Worst</span><span class="value" id="rtWorst">—</span></div>
+        <div class="stat"><span class="label">Std dev</span><span class="value" id="rtStd">—</span></div>
+      </div>
+
+      <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
+        <button class="btn secondary" id="rtReset" type="button">Reset</button>
+        <a class="btn secondary" href="index.html">← Back to home</a>
+      </div>
+
+      <div class="result-panel" id="rtResult" style="display:none;">
+        <div class="card verdict" style="box-shadow:var(--shadow-md);">
+          <div class="vbig" id="rtResAvg">—</div>
+          <div class="vsub">average reaction time</div>
+          <div class="chips" style="justify-content:center;margin:12px 0;">
+            <span class="chip" id="rtResRank"></span>
+            <span class="chip" id="rtResBest"></span>
+          </div>
+          <ul id="rtList" style="list-style:none;margin:0 0 14px;padding:0;font-size:.88rem;display:grid;gap:4px;"></ul>
+          <button class="btn" id="rtAgain" type="button">Run again</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ad-slot rectangle" data-ad-slot="RT_INCONTENT">Ad slot · In-content (336×280)</div>
+
+    <div class="grid-main has-sidebar">
+      <div>
+        <div class="card prose" style="margin-bottom:24px;">
+          <h2>What&rsquo;s a good reaction time?</h2>
+          <p>Sub-200 ms is exceptional, <strong>200–240 ms is a good human average</strong>, 250–300 ms is typical, and above 300 ms suggests tiredness, distraction, or higher display latency. Pro esports players often sit in the 130–170 ms band for visual stimuli.</p>
+          <h2>How the test works</h2>
+          <p>After you click to start, the screen turns green after a random delay. The time between the color change and your click is measured with the browser&rsquo;s high-resolution timer. The whole run is 5 rounds; averages smooth out one lucky or unlucky click.</p>
+          <div class="notice">Clicking before green counts as an early start and that round is thrown away — patience is part of the skill.</div>
+        </div>
+        <div class="card">
+          <h2>Frequently asked questions</h2>
+          <div class="faq" style="margin-top:8px;">
+            <details class="faq-item" open>
+              <summary>Why does the delay vary every round?</summary>
+              <p>A random delay (1–3.5 seconds) stops you from anticipating the exact frame. Anticipating can understate true reaction speed, so randomness keeps the measurement honest.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How is the time measured so precisely?</summary>
+              <p>Both the color switch and your click carry a high-resolution performance.now() timestamp (microsecond precision before rounding), and the difference between them is your reaction time.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Is a slow laptop going to make my time worse?</summary>
+              <p>Slightly. Total measured time includes display refresh timing and OS/javscript overhead, so comparing results on the same machine is the fairest baseline.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+      <aside class="aside-sticky">
+        <div class="ad-slot sidebar" data-ad-slot="RT_SIDEBAR">Ad slot · Sidebar (300×250)</div>
+        <div class="card">
+          <h3>Related tools</h3>
+          <div class="related" style="flex-direction:column;">
+            <a href="mouse-button-test.html">Mouse button test</a>
+            <a href="dpi-test.html">DPI test</a>
+            <a href="scroll-wheel-test.html">Scroll wheel test</a>
+            <a href="mouse-latency-test.html">Mouse latency test</a>
+            <a href="click-speed-test.html">Click speed test</a>
+            <a href="aim-trainer.html">Aim &amp; memory challenge</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Mouse tests</h4>
+        <ul>
+          <li><a href="mouse-button-test.html">Mouse Button Test</a></li>
+          <li><a href="dpi-test.html">DPI Test</a></li>
+          <li><a href="scroll-wheel-test.html">Scroll Wheel Test</a></li>
+          <li><a href="mouse-latency-test.html">Mouse Latency Test</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Speed &amp; reflexes</h4>
+        <ul>
+          <li><a href="click-speed-test.html">Click Speed Test (CPS)</a></li>
+          <li><a href="reaction-time-test.html">Reaction Time Test</a></li>
+          <li><a href="aim-trainer.html">Aim &amp; Memory Challenge</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>MouseBench</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-use.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MouseBench. All tests run locally in your browser.</span>
+      <span>Made for fast, clutter-free hardware testing.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+<script src="js/reaction-time-test.js"></script>
+</body>
+</html>

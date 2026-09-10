@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test de la Rueda de Scroll del Ratón — Comprueba su Estado</title>
+<meta name="description" content="Test gratuito de la rueda de scroll del ratón online. Detecta pasos perdidos, pasos invertidos, vibración y tirones, y obtén un veredicto sobre el estado de la rueda. Funciona íntegramente en tu navegador.">
+<link rel="canonical" href="https://yourdomain.com/es/scroll-wheel-test/">
+<link rel="alternate" hreflang="es" href="https://yourdomain.com/es/scroll-wheel-test/">
+<link rel="alternate" hreflang="en" href="https://yourdomain.com/scroll-wheel-test/">
+<link rel="alternate" hreflang="x-default" href="https://yourdomain.com/scroll-wheel-test/">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{var t=localStorage.getItem('mbt')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Test de la rueda de scroll","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Diagnostica el estado de la rueda de scroll del ratón a partir de los eventos de rueda en el navegador."}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg class="brand-svg" viewBox="0 0 24 24" width="25.2" height="25.2" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="#fff"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="#fff"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="#7c3aed"/><circle cx="8.3" cy="17" r="1.2" fill="#7c3aed"/><circle cx="15.7" cy="17" r="1.2" fill="#7c3aed"/></g></g></svg></span><span>MouseBench</span></a>
+    <a class="lang-link" href="../scroll-wheel-test.html" hreflang="en" aria-label="Switch to English">English</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Cambiar entre tema claro y oscuro">
+      <svg class="theme-icon" viewBox="0 0 24 24" width="26.62" height="26.62" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="var(--icon-mouse)"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="var(--icon-mouse)"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="var(--icon-mouse)" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="var(--icon-accent)"/><circle cx="8.3" cy="17" r="1.2" fill="var(--icon-accent)"/><circle cx="15.7" cy="17" r="1.2" fill="var(--icon-accent)"/></g></g></svg>
+    </button>
+    <button class="nav-toggle" id="navToggle" type="button" aria-haspopup="true" aria-expanded="false">Menú <span aria-hidden="true">⌄</span></button>
+    <nav class="nav-panel" id="navPanel" aria-label="Todas las herramientas">
+      <div class="nav-group">Destacados</div>
+      <a class="nav-link" href="aim-trainer.html"><span class="ico">🎯</span>Desafío de puntería y memoria</a>
+      <a class="nav-link" href="index.html"><span class="ico">⌂</span>Inicio</a>
+      <div class="nav-group">Pruebas de ratón</div>
+      <a class="nav-link" href="mouse-button-test.html"><span class="ico">🖱️</span>Test de botones del ratón</a>
+      <a class="nav-link" href="dpi-test.html"><span class="ico">📏</span>Test de DPI</a>
+      <a class="nav-link" href="scroll-wheel-test.html"><span class="ico">🌀</span>Test de la rueda de desplazamiento</a>
+      <a class="nav-link" href="mouse-latency-test.html"><span class="ico">⚡</span>Test de latencia del ratón</a>
+      <div class="nav-group">Velocidad y reflejos</div>
+      <a class="nav-link" href="click-speed-test.html"><span class="ico">💥</span>Test de velocidad de clic (CPS)</a>
+      <a class="nav-link" href="reaction-time-test.html"><span class="ico">⏱️</span>Test de tiempo de reacción</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-zone">
+  <div class="container">
+    <div class="hero">
+      <span class="kicker">Prueba de hardware</span>
+      <h1>Test de la Rueda de Scroll del Ratón</h1>
+      <p>Haz scroll en una dirección y observa la señal en directo. La herramienta cuenta los eventos, detecta pasos invertidos, saltos y vibración, y da un veredicto sobre el estado de tu rueda.</p>
+    </div>
+
+    <div class="ad-slot leaderboard" data-ad-slot="SW_LEADERBOARD">Espacio publicitario · Líder (728×90)</div>
+
+    <div class="stage">
+      <div class="stage-title">
+        <h2>Señal de la rueda</h2>
+        <div class="pill-group" role="group" aria-label="Duración">
+          <button class="pill active" data-dur="15" type="button">15s</button>
+          <button class="pill" data-dur="30" type="button">30s</button>
+          <button class="pill" data-dur="60" type="button">60s</button>
+        </div>
+      </div>
+
+      <div class="scroll-zone" id="scrollZone">
+        <div>
+          <div class="big">Haz scroll aquí</div>
+          <div class="muted small">Sigue haciendo scroll en una sola dirección. Haz una pausa y vuelve a empezar para una nueva pasada.</div>
+        </div>
+      </div>
+
+      <canvas id="scrollChart" height="90" style="width:100%;margin:14px 0 0;background:var(--surface-2);border-radius:var(--radius-sm);" aria-label="Gráfico de la señal de la rueda"></canvas>
+
+      <div class="stats-row" style="margin-top:14px;">
+        <div class="stat"><span class="label">Eventos</span><span class="value" id="swEvents">0</span></div>
+        <div class="stat"><span class="label">Arriba</span><span class="value" id="swUp">0</span></div>
+        <div class="stat"><span class="label">Abajo</span><span class="value" id="swDown">0</span></div>
+        <div class="stat"><span class="label">Inversiones</span><span class="value" id="swRev">0</span></div>
+        <div class="stat"><span class="label">ΔY total</span><span class="value" id="swDeltas">0</span></div>
+        <div class="stat"><span class="label">Horizontal</span><span class="value" id="swHoriz">0</span></div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
+        <button class="btn" id="swStart" type="button">Empezar la prueba</button>
+        <button class="btn secondary" id="swReset" type="button">Reiniciar datos</button>
+        <a class="btn secondary" href="index.html">← Volver al inicio</a>
+        <span class="muted small" style="align-self:center;" id="swTimer"></span>
+      </div>
+
+      <div class="result-panel" id="swResult" style="display:none;">
+        <div class="card verdict" style="box-shadow:var(--shadow-md);">
+          <div class="vbig" id="swResTitle">La entrada de la rueda parece estable</div>
+          <div class="vsub" id="swResText"></div>
+          <div class="chips" style="justify-content:center;margin:12px 0;">
+            <span class="chip" id="swResEvents"></span>
+            <span class="chip" id="swResRevs"></span>
+            <span class="chip" id="swResHoriz"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ad-slot rectangle" data-ad-slot="SW_INCONTENT">Espacio publicitario · En contenido (336×280)</div>
+
+    <div class="grid-main has-sidebar">
+      <div>
+        <div class="card prose" style="margin-bottom:24px;">
+          <h2>Cómo leer los resultados</h2>
+          <ul>
+            <li><strong>Inversiones</strong>: una señal que cambia de dirección mientras haces scroll en una sola. Alguna puede deberse a un error humano; varias con un scroll suave apuntan a un encoder sucio o a un contacto flojo.</li>
+            <li><strong>ΔY total + recuento de eventos</strong>: las ruedas de alta resolución emiten deltas fraccionarios pequeños; las ruedas de pasos emiten valores fijos (normalmente 100). Una rueda que deja de producir eventos a mitad de pasada está perdiendo pasos.</li>
+            <li><strong>Horizontal</strong>: los ratones con rueda inclinable informan de deltaX. Un deltaX repetido sin inclinación intencionada sugiere ruido.</li>
+          </ul>
+          <div class="notice">Para una lectura más fiable, mantén el scroll en una sola dirección durante toda la duración y no cambies la velocidad de forma brusca. Las vueltas lentas, constantes y completas funcionan mejor.</div>
+          <h2>Fallas habituales de la rueda que detecta esta prueba</h2>
+          <p>Zonas muertas en una dirección, rebote al soltar, scroll fantasma después de parar la rueda y diafonía, cuando pulsar el botón central también dispara un evento de scroll. Si las inversiones y la vibración se mantienen en cero durante una pasada de 60 segundos, el encoder está sano.</p>
+        </div>
+        <div class="card">
+          <h2>Preguntas frecuentes</h2>
+          <div class="faq" style="margin-top:8px;">
+            <details class="faq-item" open>
+              <summary>¿Qué causa el scroll inverso?</summary>
+              <p>Contactos del encoder sucios u oxidados, un conjunto de rueda desgastado o, en ratones inalámbricos, la batería baja. Limpiar el encoder con alcohol isopropílico arregla la mayoría de los casos; los problemas persistentes implican cambiar el encoder.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Por qué mi rueda de giro libre muestra deltas enormes?</summary>
+              <p>Las ruedas de alta resolución (como las de giro libre de Logitech) informan de muchos valores deltaY fraccionarios pequeños por revolución. Eso es normal: compara los recuentos de eventos dentro de la misma familia de ratones.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Funciona esto con paneles táctiles?</summary>
+              <p>Los paneles táctiles no producen eventos de <code>wheel</code>: esta prueba es solo para ruedas físicas de ratón.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+      <aside class="aside-sticky">
+        <div class="ad-slot sidebar" data-ad-slot="SW_SIDEBAR">Espacio publicitario · Barra lateral (300×250)</div>
+        <div class="card">
+          <h3>Herramientas relacionadas</h3>
+          <div class="related" style="flex-direction:column;">
+            <a href="mouse-button-test.html">Test de botones del ratón</a>
+            <a href="dpi-test.html">Test de DPI</a>
+            <a href="mouse-latency-test.html">Test de latencia del ratón</a>
+            <a href="click-speed-test.html">Test de velocidad de clic</a>
+            <a href="reaction-time-test.html">Test de tiempo de reacción</a>
+            <a href="aim-trainer.html">Desafío de puntería y memoria</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Pruebas de ratón</h4>
+        <ul>
+          <li><a href="mouse-button-test.html">Test de botones del ratón</a></li>
+          <li><a href="dpi-test.html">Test de DPI</a></li>
+          <li><a href="scroll-wheel-test.html">Test de la rueda de desplazamiento</a></li>
+          <li><a href="mouse-latency-test.html">Test de latencia del ratón</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Velocidad y reflejos</h4>
+        <ul>
+          <li><a href="click-speed-test.html">Test de velocidad de clic (CPS)</a></li>
+          <li><a href="reaction-time-test.html">Test de tiempo de reacción</a></li>
+          <li><a href="aim-trainer.html">Desafío de puntería y memoria</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>MouseBench</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#about">Acerca de</a></li>
+          <li><a href="privacy-policy.html">Política de privacidad</a></li>
+          <li><a href="terms-of-use.html">Términos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MouseBench. Todas las pruebas se ejecutan localmente en tu navegador.</span>
+      <span>Hecho para probar hardware de forma rápida y sin distracciones.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/common.js"></script>
+<script>
+  window.L10N = {
+    'sw_start': 'Empezar la prueba', 'sw_stop': 'Parar',
+    'sw_arm': 'Haz scroll para arrancar el temporizador', 'sw_left': 's restantes',
+    'sw_ok_t': 'La entrada de la rueda parece estable',
+    'sw_ok_s': 'No se detectaron inversiones de dirección ni pasos perdidos en esta pasada.',
+    'sw_rev_t': 'Pasos invertidos detectados',
+    'sw_rev_s': 'La señal cambió de dirección mientras hacías scroll en una sola dirección: algo típico de un encoder sucio. Prueba a limpiarlo.',
+    'sw_irr_t': 'Ligeras irregularidades',
+    'sw_irr_s_skip': 'Parece que algunos eventos de la rueda se pierden entre pasos: revisa si hay tirones al hacer scroll.',
+    'sw_irr_s': 'Se aprecian algunas inversiones. Mantén el scroll firme en la próxima pasada.',
+    'sw_chip_events': ' eventos', 'sw_chip_revs': ' inversiones', 'sw_chip_horiz': ' horizontal',
+    'sw_chart': 'Haz scroll para ver el gráfico de la señal'
+  };
+</script>
+<script src="../js/scroll-wheel-test.js"></script>
+</body>
+</html>

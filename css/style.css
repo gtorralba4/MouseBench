@@ -114,6 +114,7 @@ button { font-family: inherit; }
 }
 .nav-link:hover { background: var(--accent-soft); color: var(--accent); text-decoration: none; }
 .nav-link .ico { font-size: 1.05rem; width: 22px; text-align: center; }
+.nav-link .ico svg, .tool-card .ico svg { display: block; }
 
 /* ===================== Layout ===================== */
 .page-zone {

@@ -84,13 +84,17 @@ button { font-family: inherit; }
   color: var(--ink);
 }
 .nav-toggle:hover { background: var(--surface-2); }
-.lang-link {
-  display: inline-flex; align-items: center;
-  border: 1px solid var(--line); background: var(--surface);
-  border-radius: 10px; padding: 8px 12px; font-size: .82rem; font-weight: 700; cursor: pointer;
-  color: var(--ink-soft); letter-spacing: .02em; text-decoration: none;
+.lang-drop { position: relative; }
+.lang-toggle { padding: 7px 10px; white-space: nowrap; }
+.nav-panel.lang-panel {
+  position: absolute; right: 0; top: calc(100% + 10px);
+  width: max-content;
+  max-width: calc(100vw - 40px);
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-lg); padding: 6px; z-index: 60;
 }
-.lang-link:hover { background: var(--surface-2); color: var(--ink); text-decoration: none; }
+.nav-panel.lang-panel .nav-link { font-weight: 600; padding: 7px 8px; }
+.nav-link.current { color: var(--accent); }
 .nav-panel {
   position: absolute; right: 20px; top: calc(var(--header-h) - 4px);
   width: min(360px, calc(100vw - 40px));

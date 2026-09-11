@@ -2,18 +2,28 @@
 (function () {
   'use strict';
 
-  // Dropdown nav
-  var toggle = document.getElementById('navToggle');
-  var panel = document.getElementById('navPanel');
-  if (toggle && panel) {
-    toggle.addEventListener('click', function (e) {
+  // Dropdowns (main nav + language switcher). Only one open at a time.
+  function wireDropdown(toggleId, panelId) {
+    var t = document.getElementById(toggleId);
+    var p = document.getElementById(panelId);
+    if (!t || !p) return;
+    t.addEventListener('click', function (e) {
       e.stopPropagation();
-      panel.classList.toggle('open');
+      var willOpen = !p.classList.contains('open');
+      document.querySelectorAll('.nav-panel.open').forEach(function (el) { el.classList.remove('open'); });
+      document.querySelectorAll('.nav-toggle[aria-expanded]').forEach(function (el) { el.setAttribute('aria-expanded', 'false'); });
+      if (willOpen) p.classList.add('open');
+      t.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
     });
     document.addEventListener('click', function (e) {
-      if (!panel.contains(e.target) && !toggle.contains(e.target)) panel.classList.remove('open');
+      if (!p.contains(e.target) && !t.contains(e.target)) {
+        p.classList.remove('open');
+        t.setAttribute('aria-expanded', 'false');
+      }
     });
   }
+  wireDropdown('navToggle', 'navPanel');
+  wireDropdown('langToggle', 'langPanel');
 
   // Theme toggle (persists raw string, matching the inline bootstrap in <head>)
   var themeBtn = document.getElementById('themeToggle');

@@ -187,7 +187,7 @@
     document.getElementById('scrollDist').textContent = fmt.int(state.scroll);
     document.getElementById('lastWheel').textContent = (dir === 'up' ? T('dir_up', 'up') : T('dir_down', 'down')) + ' (Δ ' + Math.round(e.deltaY) + ')';
     document.getElementById('rawDelta').textContent = Math.round(e.deltaY) + T('mbt_mode', ' / mode ') + e.deltaMode;
-    pushLog(ts() + '  ' + T('mbt_wheel', 'Wheel ') + dir + '  Δ ' + Math.round(e.deltaY));
+    pushLog(ts() + '  ' + T('mbt_wheel', 'Wheel ') + (dir === 'up' ? T('dir_up', 'up') : T('dir_down', 'down')) + '  Δ ' + Math.round(e.deltaY));
   });
 
   // ---- reset ----

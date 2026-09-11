@@ -19,7 +19,13 @@
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="index.html"><span class="brand-mark"><svg class="brand-svg" viewBox="0 0 24 24" width="25.2" height="25.2" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="#fff"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="#fff"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="#7c3aed"/><circle cx="8.3" cy="17" r="1.2" fill="#7c3aed"/><circle cx="15.7" cy="17" r="1.2" fill="#7c3aed"/></g></g></svg></span><span>MouseBench</span></a>
-    <a class="lang-link" href="../dpi-test.html" hreflang="en" aria-label="Switch to English">English</a>
+    <div class="lang-drop">
+      <button class="nav-toggle lang-toggle" id="langToggle" type="button" aria-haspopup="true" aria-expanded="false">Idioma <span aria-hidden="true">⌄</span></button>
+      <div class="nav-panel lang-panel" id="langPanel">
+        <a class="nav-link current" href="dpi-test.html" hreflang="es" aria-current="true"><span class="ico">🇪🇸</span>Español</a>
+        <a class="nav-link" href="../dpi-test.html" hreflang="en"><span class="ico">🇬🇧</span>English</a>
+      </div>
+    </div>
     <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Cambiar entre tema claro y oscuro">
       <svg class="theme-icon" viewBox="0 0 24 24" width="26.62" height="26.62" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="var(--icon-mouse)"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="var(--icon-mouse)"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="var(--icon-mouse)" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="var(--icon-accent)"/><circle cx="8.3" cy="17" r="1.2" fill="var(--icon-accent)"/><circle cx="15.7" cy="17" r="1.2" fill="var(--icon-accent)"/></g></g></svg>
     </button>
@@ -55,7 +61,7 @@
       <ol>
         <li><strong>Desactiva la aceleración del puntero</strong> (consulta el aviso en la prueba de abajo). De lo contrario, la estimación no sirve.</li>
         <li>Elige una longitud de arrastre: 3 pulgadas (7,5 cm) es un buen equilibrio entre precisión y espacio.</li>
-        <li>Coloca una regla o cinta métrica sobre la alfombrilla. Pulsa y mantén en cualquier punto de la regla de abajo, mueve el ratón exactamente la longitud que elegiste —medida en el <em>mundo real</em>, sobre la mesa— en línea recta lateral, y suelta dentro de la página.</li>
+        <li>Coloca una regla o cinta métrica sobre la alfombrilla. Pulsa y mantén en cualquier punto de la regla de abajo, mueve el ratón exactamente la longitud que elegiste (medida en el <em>mundo real</em>, sobre la mesa) en línea recta lateral, y suelta dentro de la página.</li>
         <li>Lee la estimación y compárala con los ajustes de DPI habituales que se muestran encima de tu resultado.</li>
       </ol>
       <div class="notice"><strong>La longitud elegida debe respetarse en la realidad.</strong> La distancia en pantalla entre las marcas Inicio y Fin de la regla es solo una aproximación proporcional de la longitud elegida. Para un resultado preciso, mide la distancia físicamente con una regla o cinta sobre la alfombrilla: confía en la cinta, no en las marcas de la pantalla.</div>
@@ -122,7 +128,7 @@
           <p>Tu navegador informa de <code>movementX</code>: cuántos píxeles se ha movido el cursor entre dos eventos. Durante el arrastre sumamos esos incrementos y luego los dividimos entre la distancia física que moviste (la longitud de arrastre que elegiste, convertida a pulgadas). Con la aceleración del puntero desactivada y la velocidad en el punto medio, los píxeles recorridos por pulgada física ≈ DPI/CPI del sensor.</p>
           <p><strong>La velocidad del arrastre importa.</strong> Busca un ritmo relajado y constante. Los movimientos muy rápidos pueden superar lo que el sistema operativo y el navegador muestrean por evento (cuentas perdidas), y los arrastres extremadamente lentos dejan que el suavizado residual del puntero interfiera. Las velocidades baja y media son actualmente 100% seguras; los arrastres rápidos son <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementX" rel="noopener">dependientes de la implementación</a>.</p>
           <h2>¿Qué son los DPI?</h2>
-          <p>DPI (o CPI) es cuántos pasos informa el sensor por pulgada de recorrido físico: 400 es bajo, 800 es un punto de partida muy popular y 1600+ es alto. Combinado con la sensibilidad del juego define tu eDPI: <code>DPI × sensibilidad del juego</code>. Dos jugadores con el mismo eDPI giran a la misma velocidad.</p>
+          <p>DPI (o CPI) es cuántos pasos informa el sensor por pulgada de recorrido físico: 400 es bajo, 800 es un punto de partida muy popular y 1600+ es alto. Combinado con la sensibilidad de un juego define tu eDPI: <code>DPI × sensibilidad</code>. Dos jugadores con el mismo eDPI giran a la misma velocidad.</p>
           <h2>Cómo mirar tu DPI en tu sistema operativo</h2>
           <p><strong>Windows</strong>: el regulador de velocidad del puntero (Configuración → Bluetooth y dispositivos → Ratón) solo multiplica la velocidad del cursor; no muestra el DPI del sensor. En la mayoría de los ratones, abre el software del fabricante (Logitech G Hub, Razer Synapse, Corsair iCUE, SteelSeries GG, etc.) y consúltalo allí.</p>
           <p><strong>macOS</strong>: Ajustes del sistema → Ratón → Velocidad de seguimiento también es un multiplicador, no el valor real. Consulta la aplicación del fabricante de tu ratón para ver o cambiar el DPI del sensor.</p>

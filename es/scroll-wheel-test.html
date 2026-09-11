@@ -19,7 +19,13 @@
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="index.html"><span class="brand-mark"><svg class="brand-svg" viewBox="0 0 24 24" width="25.2" height="25.2" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="#fff"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="#fff"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="#7c3aed"/><circle cx="8.3" cy="17" r="1.2" fill="#7c3aed"/><circle cx="15.7" cy="17" r="1.2" fill="#7c3aed"/></g></g></svg></span><span>MouseBench</span></a>
-    <a class="lang-link" href="../scroll-wheel-test.html" hreflang="en" aria-label="Switch to English">English</a>
+    <div class="lang-drop">
+      <button class="nav-toggle lang-toggle" id="langToggle" type="button" aria-haspopup="true" aria-expanded="false">Idioma <span aria-hidden="true">⌄</span></button>
+      <div class="nav-panel lang-panel" id="langPanel">
+        <a class="nav-link current" href="scroll-wheel-test.html" hreflang="es" aria-current="true"><span class="ico">🇪🇸</span>Español</a>
+        <a class="nav-link" href="../scroll-wheel-test.html" hreflang="en"><span class="ico">🇬🇧</span>English</a>
+      </div>
+    </div>
     <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Cambiar entre tema claro y oscuro">
       <svg class="theme-icon" viewBox="0 0 24 24" width="26.62" height="26.62" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="var(--icon-mouse)"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="var(--icon-mouse)"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="var(--icon-mouse)" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="var(--icon-accent)"/><circle cx="8.3" cy="17" r="1.2" fill="var(--icon-accent)"/><circle cx="15.7" cy="17" r="1.2" fill="var(--icon-accent)"/></g></g></svg>
     </button>
@@ -45,7 +51,7 @@
     <div class="hero">
       <span class="kicker">Prueba de hardware</span>
       <h1>Test de la Rueda de Scroll del Ratón</h1>
-      <p>Haz scroll en una dirección y observa la señal en directo. La herramienta cuenta los eventos, detecta pasos invertidos, saltos y vibración, y da un veredicto sobre el estado de tu rueda.</p>
+      <p>Usa la rueda en una dirección y observa la señal en directo. La herramienta cuenta los eventos, detecta pasos invertidos, saltos y vibración, y da un veredicto sobre el estado de tu rueda.</p>
     </div>
 
     <div class="ad-slot leaderboard" data-ad-slot="SW_LEADERBOARD">Espacio publicitario · Líder (728×90)</div>
@@ -62,8 +68,8 @@
 
       <div class="scroll-zone" id="scrollZone">
         <div>
-          <div class="big">Haz scroll aquí</div>
-          <div class="muted small">Sigue haciendo scroll en una sola dirección. Haz una pausa y vuelve a empezar para una nueva pasada.</div>
+          <div class="big">Usa la rueda aquí</div>
+          <div class="muted small">Sigue usando la rueda en una sola dirección. Haz una pausa y vuelve a empezar para una nueva pasada.</div>
         </div>
       </div>
 
@@ -104,20 +110,20 @@
         <div class="card prose" style="margin-bottom:24px;">
           <h2>Cómo leer los resultados</h2>
           <ul>
-            <li><strong>Inversiones</strong>: una señal que cambia de dirección mientras haces scroll en una sola. Alguna puede deberse a un error humano; varias con un scroll suave apuntan a un encoder sucio o a un contacto flojo.</li>
+            <li><strong>Inversiones</strong>: una señal que cambia de dirección mientras usas la rueda en una sola. Alguna puede deberse a un error humano; varias con un scroll suave apuntan a un codificador sucio o a un contacto flojo.</li>
             <li><strong>ΔY total + recuento de eventos</strong>: las ruedas de alta resolución emiten deltas fraccionarios pequeños; las ruedas de pasos emiten valores fijos (normalmente 100). Una rueda que deja de producir eventos a mitad de pasada está perdiendo pasos.</li>
             <li><strong>Horizontal</strong>: los ratones con rueda inclinable informan de deltaX. Un deltaX repetido sin inclinación intencionada sugiere ruido.</li>
           </ul>
-          <div class="notice">Para una lectura más fiable, mantén el scroll en una sola dirección durante toda la duración y no cambies la velocidad de forma brusca. Las vueltas lentas, constantes y completas funcionan mejor.</div>
-          <h2>Fallas habituales de la rueda que detecta esta prueba</h2>
-          <p>Zonas muertas en una dirección, rebote al soltar, scroll fantasma después de parar la rueda y diafonía, cuando pulsar el botón central también dispara un evento de scroll. Si las inversiones y la vibración se mantienen en cero durante una pasada de 60 segundos, el encoder está sano.</p>
+          <div class="notice">Para una lectura más fiable, mantén la rueda en una sola dirección durante toda la duración y no cambies la velocidad de forma brusca. Las vueltas lentas, constantes y completas funcionan mejor.</div>
+          <h2>Fallos habituales de la rueda que detecta esta prueba</h2>
+          <p>Zonas muertas en una dirección, rebote al soltar, scroll fantasma después de parar la rueda y diafonía, cuando pulsar el botón central también dispara un evento de scroll. Si las inversiones y la vibración se mantienen en cero durante una pasada de 60 segundos, el codificador está sano.</p>
         </div>
         <div class="card">
           <h2>Preguntas frecuentes</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
               <summary>¿Qué causa el scroll inverso?</summary>
-              <p>Contactos del encoder sucios u oxidados, un conjunto de rueda desgastado o, en ratones inalámbricos, la batería baja. Limpiar el encoder con alcohol isopropílico arregla la mayoría de los casos; los problemas persistentes implican cambiar el encoder.</p>
+              <p>Contactos del codificador sucios u oxidados, un conjunto de rueda desgastado o, en ratones inalámbricos, la batería baja. Limpiar el codificador con alcohol isopropílico arregla la mayoría de los casos; los problemas persistentes implican cambiar el codificador.</p>
             </details>
             <details class="faq-item">
               <summary>¿Por qué mi rueda de giro libre muestra deltas enormes?</summary>
@@ -189,16 +195,16 @@
 <script>
   window.L10N = {
     'sw_start': 'Empezar la prueba', 'sw_stop': 'Parar',
-    'sw_arm': 'Haz scroll para arrancar el temporizador', 'sw_left': 's restantes',
+    'sw_arm': 'Usa la rueda para arrancar el temporizador', 'sw_left': 's restantes',
     'sw_ok_t': 'La entrada de la rueda parece estable',
     'sw_ok_s': 'No se detectaron inversiones de dirección ni pasos perdidos en esta pasada.',
     'sw_rev_t': 'Pasos invertidos detectados',
-    'sw_rev_s': 'La señal cambió de dirección mientras hacías scroll en una sola dirección: algo típico de un encoder sucio. Prueba a limpiarlo.',
+    'sw_rev_s': 'La señal cambió de dirección mientras usabas la rueda en una sola dirección: algo típico de un codificador sucio. Prueba a limpiarlo.',
     'sw_irr_t': 'Ligeras irregularidades',
-    'sw_irr_s_skip': 'Parece que algunos eventos de la rueda se pierden entre pasos: revisa si hay tirones al hacer scroll.',
-    'sw_irr_s': 'Se aprecian algunas inversiones. Mantén el scroll firme en la próxima pasada.',
+    'sw_irr_s_skip': 'Parece que algunos eventos de la rueda se pierden entre pasos: revisa si hay tirones al usar la rueda.',
+    'sw_irr_s': 'Se aprecian algunas inversiones. Mantén la rueda firme en la próxima pasada.',
     'sw_chip_events': ' eventos', 'sw_chip_revs': ' inversiones', 'sw_chip_horiz': ' horizontal',
-    'sw_chart': 'Haz scroll para ver el gráfico de la señal'
+    'sw_chart': 'Usa la rueda para ver el gráfico de la señal'
   };
 </script>
 <script src="../js/scroll-wheel-test.js"></script>

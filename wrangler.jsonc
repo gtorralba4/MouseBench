@@ -5,12 +5,6 @@
   "observability": {
     "enabled": true
   },
-  "routes": [
-    {
-      "pattern": "mousebench.fyi",
-      "custom_domain": true
-    }
-  ],
   "assets": {
     "directory": "./public"
   }

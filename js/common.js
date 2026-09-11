@@ -47,10 +47,11 @@
   // Prefers-reduced-motion respect
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Number formatting
+  // Number formatting — locale derived from <html lang="…"> so decimal-comma/de/ES
+  var _fmtLocale = ({de: 'de-DE', es: 'es-ES'}[document.documentElement.lang] || 'en-US');
   window.fmt = {
-    int: function (n) { return Math.round(n).toLocaleString('en-US'); },
-    dec: function (n, d) { return n.toLocaleString('en-US', { maximumFractionDigits: d == null ? 2 : d, minimumFractionDigits: d == null ? 2 : d }); }
+    int: function (n) { return Math.round(n).toLocaleString(_fmtLocale); },
+    dec: function (n, d) { return n.toLocaleString(_fmtLocale, { maximumFractionDigits: d == null ? 2 : d, minimumFractionDigits: d == null ? 2 : d }); }
   };
 
   // Safe localStorage helpers (private browsing may throw)

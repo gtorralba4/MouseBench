@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DPI-Test der Maus — Miss deine Empfindlichkeit online</title>
+<meta name="description" content="Schätze die DPI/CPI deiner Maus im Browser: Drücke, halte und ziehe deine Maus eine gemessene Strecke und lies, wie viele Pixel sie zurückgelegt hat. Mit Schritten, Tools und ehrlichen Grenzen.">
+<link rel="canonical" href="https://mousebench.fyi/de/dpi-test/">
+<link rel="alternate" hreflang="de" href="https://mousebench.fyi/de/dpi-test/">
+<link rel="alternate" hreflang="en" href="https://mousebench.fyi/dpi-test/">
+<link rel="alternate" hreflang="es" href="https://mousebench.fyi/es/dpi-test/">
+<link rel="alternate" hreflang="x-default" href="https://mousebench.fyi/dpi-test/">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{var t=localStorage.getItem('mbt')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DPI-Test der Maus","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Schätze Maus-DPI/CPI aus der Bildschirmbewegung im Browser."}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg class="brand-svg" viewBox="0 0 24 24" width="25.2" height="25.2" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="#fff"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="#fff"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="#059669"/><circle cx="8.3" cy="17" r="1.2" fill="#059669"/><circle cx="15.7" cy="17" r="1.2" fill="#059669"/></g></g></svg></span><span>MouseBench</span></a>
+    <div class="lang-drop">
+      <button class="nav-toggle lang-toggle" id="langToggle" type="button" aria-haspopup="true" aria-expanded="false">Sprache <span aria-hidden="true">⌄</span></button>
+      <div class="nav-panel lang-panel" id="langPanel">
+        <a class="nav-link current" href="dpi-test.html" hreflang="de" aria-current="true"><span class="ico">🇩🇪</span>Deutsch</a>
+        <a class="nav-link" href="../es/dpi-test.html" hreflang="es"><span class="ico">🇪🇸</span>Español</a>
+        <a class="nav-link" href="../dpi-test.html" hreflang="en"><span class="ico">🇬🇧</span>English</a>
+      </div>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Zwischen hellem und dunklem Thema wechseln">
+      <svg class="theme-icon" viewBox="0 0 24 24" width="26.62" height="26.62" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="var(--icon-mouse)"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="var(--icon-mouse)"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="var(--icon-mouse)" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="var(--icon-accent)"/><circle cx="8.3" cy="17" r="1.2" fill="var(--icon-accent)"/><circle cx="15.7" cy="17" r="1.2" fill="var(--icon-accent)"/></g></g></svg>
+    </button>
+    <div class="menu-drop">
+      <button class="nav-toggle" id="navToggle" type="button" aria-haspopup="true" aria-expanded="false">Menü <span aria-hidden="true">⌄</span></button>
+      <nav class="nav-panel menu-panel" id="navPanel" aria-label="Alle Tools">
+      <div class="nav-group">Empfohlen</div>
+      <a class="nav-link" href="aim-trainer.html"><span class="ico">🎯</span>Ziel- &amp; Gedächtnis-Challenge</a>
+      <a class="nav-link" href="index.html"><span class="ico">⌂</span>Startseite</a>
+      <div class="nav-group">Maus-Tests</div>
+      <a class="nav-link" href="mouse-button-test.html"><span class="ico">🖱️</span>Maustasten-Test</a>
+      <a class="nav-link" href="dpi-test.html"><span class="ico">📏</span>DPI-Test</a>
+      <a class="nav-link" href="scroll-wheel-test.html"><span class="ico">🌀</span>Mausrad-Test</a>
+      <a class="nav-link" href="mouse-latency-test.html"><span class="ico">⚡</span>Maus-Latenz-Test</a>
+      <div class="nav-group">Geschwindigkeit &amp; Reflexe</div>
+      <a class="nav-link" href="click-speed-test.html"><span class="ico">💥</span>Klickgeschwindigkeits-Test (CPS)</a>
+      <a class="nav-link" href="reaction-time-test.html"><span class="ico">⏱️</span>Reaktionszeit-Test</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="page-zone">
+  <div class="container">
+    <div class="hero">
+      <span class="kicker">Hardware-Test</span>
+      <h1>DPI-Test der Maus</h1>
+      <p>Ziehe deine Maus eine gemessene Strecke und die Pixel werden gezählt. Das Ergebnis schätzt die Empfindlichkeit (DPI/CPI) deiner Maus.</p>
+    </div>
+
+    <div class="ad-slot leaderboard" data-ad-slot="DPI_LEADERBOARD">Werbeplatz · Leaderboard (728×90)</div>
+
+    <div class="card prose" style="margin-bottom:28px;">
+      <h2>So misst du deine DPI</h2>
+      <ol>
+        <li><strong>Deaktiviere die Mausbeschleunigung</strong> (siehe Hinweis unten im Test). Sonst ist die Schätzung sinnlos.</li>
+        <li>Wähle eine Ziehstrecke — 3 Zoll (7,5 cm) sind eine gute Balance aus Genauigkeit und Platz.</li>
+        <li>Lege ein Lineal oder ein Maßband auf dein Mauspad. Drücke und halte irgendwo innerhalb des Lineals unten, bewege deine Maus genau die gewählte Strecke — gemessen in der <em>echten Welt</em>, auf dem Schreibtisch — in einer geraden Linie seitlich, und lasse innerhalb der Seite los.</li>
+        <li>Lies die Schätzung ab und vergleiche sie mit den gängigen DPI-Voreinstellungen über deinem Ergebnis.</li>
+      </ol>
+      <div class="notice"><strong>Die gewählte Strecke muss in der Realität eingehalten werden.</strong> Die Bildschirmanzeige zwischen Start- und Zielmarkierung ist nur eine proportionale Annäherung an die gewählte Länge. Für ein genaues Ergebnis miss die Distanz physisch mit Lineal oder Maßband auf deinem Mauspad — vertraue dem Band, nicht den Bildschirmmarkierungen.</div>
+      <div class="notice"><strong>Das Ergebnis fällt auf deine Monitor-PPI zurück, wenn du von Markierung zu Markierung zielst.</strong> Browser melden nur Cursor-Pixel, nie die physische Distanz. Befolgst du die Bildschirmmarkierungen statt eine gemessene Strecke, teilst du Cursor-Pixel durch eine Bildschirm-Pixel-Spanne — sie heben sich auf, und die Zahl entspricht deiner Display-PPI (Bildschirmpixel pro physischem Zoll) und nicht der Maus-DPI. Eine Pixel-Zahl ohne bekannte Schreibtischstrecke kann DPI nicht messen.</div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-title">
+        <h2>Lineal-Ziehtest</h2>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+          <label class="muted small">Einheit:
+            <select id="dpiUnit" style="margin-left:6px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;">
+              <option value="in" selected>Zoll</option>
+              <option value="cm">Zentimeter</option>
+            </select>
+          </label>
+          <label class="muted small">Ziehlänge:
+            <select id="dpiDist" style="margin-left:6px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;"></select>
+          </label>
+        </div>
+      </div>
+
+      <div class="ruler-stage" id="rulerStage" role="button" tabindex="0" aria-label="Lineal zur DPI-Messung">
+        <div class="ruler-line" id="rulerStart" style="left:6%;"><span class="ruler-mark">Start</span></div>
+        <div class="ruler-line" id="rulerEnd" style="left:46%;"><span class="ruler-mark">Ziel</span></div>
+        <div class="ruler-cursor" id="rulerCursor" style="left:6%;"></div>
+        <div style="position:absolute;bottom:8px;width:100%;text-align:center;color:var(--muted);font-size:.85rem;" id="dpiHint">Drück und halte innerhalb, bewege die Maus <strong id="dpiHintDist">3 Zoll</strong> auf deinem Pad, dann loslassen.</div>
+      </div>
+
+      <div class="muted small" id="dpiSpan" style="margin-top:8px;"></div>
+
+      <div class="stats-row" style="margin-top:16px;">
+        <div class="stat"><span class="label">Zurückgelegte Pixel</span><span class="value" id="dpiPx">0</span></div>
+        <div class="stat"><span class="label" id="dpiStatLabel">Geschätzte DPI</span><span class="value" id="dpiValue">—</span></div>
+        <div class="stat"><span class="label">Letzte Messung</span><span class="value" id="dpiLast">—</span></div>
+        <div class="stat"><span class="label">Status</span><span class="value" id="dpiStatus">bereit</span></div>
+      </div>
+
+      <div style="display:flex;margin-top:16px;"><a class="btn secondary" href="index.html">← Zurück zur Startseite</a></div>
+
+      <div class="chips" id="dpiPresets" style="justify-content:center;"></div>
+
+      <div class="result-panel" id="dpiResult" style="display:none;">
+        <div class="card verdict" style="box-shadow:var(--shadow-md);">
+          <div class="vbig" id="dpiResValue">—</div>
+          <div class="vsub" id="dpiResSub">geschätzte DPI / CPI</div>
+          <div class="chips" style="justify-content:center;margin:12px 0;">
+            <span class="chip" id="dpiResNearest"></span>
+            <span class="chip" id="dpiResNote"></span>
+          </div>
+          <button class="btn" id="dpiAgain" type="button">Erneut messen</button>
+        </div>
+      </div>
+
+      <div class="notice">Browser können die echte Hardware-DPI nicht auslesen. Das funktioniert am besten, wenn die Mausgeschwindigkeit in Windows auf dem mittleren Strich steht und Beschleunigung deaktiviert ist (macOS: niedrigste Nachlaufgeschwindigkeit + Beschleunigung aus). Die Zahl ist eine Annäherung von ±20%.</div>
+    </div>
+
+    <div class="ad-slot rectangle" data-ad-slot="DPI_INCONTENT">Werbeplatz · Inhalt (336×280)</div>
+
+    <div class="grid-main has-sidebar">
+      <div>
+        <div class="card prose" style="margin-bottom:24px;">
+          <h2>So funktioniert die Messung</h2>
+          <p>Dein Browser meldet <code>movementX</code> — wie viele Pixel sich der Cursor zwischen zwei Events bewegt hat. Während des Ziehens addieren wir diese Werte, dann teilen wir sie durch die physische Distanz (die gewählte Ziehstrecke, umgerechnet in Zoll). Bei deaktivierter Mausbeschleunigung und Mittelposition der Mausgeschwindigkeit entspricht zurückgelegte Pixel pro physischem Zoll ungefähr der Sensor-DPI/CPI.</p>
+          <p><strong>Geschwindigkeit beim Ziehen ist wichtig.</strong> Halte ein entspanntes, gleichmäßiges Tempo. Sehr schnelle Ruckbewegungen können über das hinausgehen, was OS und Browser pro Event erfassen (verlorene Zählungen), und extrem langsames Ziehen lässt das verbleibende Zeiger-Smoothing stören. Niedrige und mittlere Geschwindigkeiten sind aktuell 100% sicher; schnelle Züge sind <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementX" rel="noopener">implementierungsabhängig</a>.</p>
+          <h2>Was ist DPI?</h2>
+          <p>DPI (oder CPI) gibt an, wie viele Zählimpulse der Sensor pro physischem Zoll meldet — 400 ist niedrig, 800 ein beliebter Startwert, 1600+ ist hoch. Zusammen mit der Spiel-Empfindlichkeit definiert das deine eDPI: <code>DPI × Empfindlichkeit</code>. Zwei Spieler mit derselben eDPI drehen sich mit derselben Geschwindigkeit.</p>
+          <h2>So findest du deine DPI im Betriebssystem</h2>
+          <p><strong>Windows</strong> — der Schieberegler für die Mausgeschwindigkeit (Einstellungen → Bluetooth &amp; Geräte → Maus) multipliziert nur die Cursor-Geschwindigkeit; er zeigt die Sensor-DPI nicht an. Für die meisten Mäuse öffne die Herstellersoftware (Logitech G Hub, Razer Synapse, Corsair iCUE, SteelSeries GG usw.) und lies die DPI dort ab.</p>
+          <p><strong>macOS</strong> — Systemeinstellungen → Maus → Nachlaufgeschwindigkeit ist ebenfalls ein Multiplikator, kein Rohwert. Überprüfe die Hersteller-App deiner Maus, um die Sensor-DPI anzusehen oder zu ändern.</p>
+          <p><strong>Linux</strong> — führe <code>xinput --list-props &lt;device&gt;</code> im Terminal aus; die aufgelistete Auflösung (oft als Impulse pro mm ausgegeben) ist die genaueste Lesart, und libinput oder die Einstellungsschicht deiner Desktop-Umgebung legen die Beschleunigungskurve darüber.</p>
+          <div class="notice">Für eine hardware-exakte Messung nutze die Hersteller-Software (G Hub, Synapse, iCUE). Diese Seite bietet die browser-sichere Annäherung für den Fall, dass sie nicht installiert ist.</div>
+        </div>
+        <div class="card">
+          <h2>Häufig gestellte Fragen</h2>
+          <div class="faq" style="margin-top:8px;">
+            <details class="faq-item" open>
+              <summary>Ist DPI dasselbe wie Empfindlichkeit?</summary>
+              <p>Nein. DPI/CPI ist eine Hardware-Eigenschaft des Sensors. Empfindlichkeit ist ein Software-Multiplikator, der darauf angewendet wird. eDPI (DPI × Empfindlichkeit) ist das, was tatsächlich die Cursor-Bewegung in Spielen bestimmt.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Warum ist das Ergebnis eine Annäherung?</summary>
+              <p>Der Browser sieht nur Bewegungen, nachdem das Betriebssystem seine Zeigerkurve angewendet hat. Bei deaktivierter Beschleunigung und 1:1-Mausgeschwindigkeit entspricht zurückgelegte Pixel pro physischem Zoll ungefähr der DPI. Jede OS-Skalierung verschiebt die Zahl.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Meine Maus zeigt keine Bewegung beim Ziehen an.</summary>
+              <p>Stelle sicher, dass du zuerst innerhalb des Lineals drückst und hältst und die Maus während des Ziehens nicht anhebst. Zu schnelles Ziehen kann bei manchen Browsern an die Hochfrequenz-Grenzen des Sensors stoßen.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+      <aside class="aside-sticky">
+        <div class="ad-slot sidebar" data-ad-slot="DPI_SIDEBAR">Werbeplatz · Seitenleiste (300×250)</div>
+        <div class="card">
+          <h3>Verwandte Tools</h3>
+          <div class="related" style="flex-direction:column;">
+            <a href="mouse-button-test.html">Maustasten-Test</a>
+            <a href="scroll-wheel-test.html">Mausrad-Test</a>
+            <a href="mouse-latency-test.html">Maus-Latenz-Test</a>
+            <a href="click-speed-test.html">Klickgeschwindigkeits-Test</a>
+            <a href="reaction-time-test.html">Reaktionszeit-Test</a>
+            <a href="aim-trainer.html">Ziel- &amp; Gedächtnis-Challenge</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Maus-Tests</h4>
+        <ul>
+          <li><a href="mouse-button-test.html">Maustasten-Test</a></li>
+          <li><a href="dpi-test.html">DPI-Test</a></li>
+          <li><a href="scroll-wheel-test.html">Mausrad-Test</a></li>
+          <li><a href="mouse-latency-test.html">Maus-Latenz-Test</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Geschwindigkeit &amp; Reflexe</h4>
+        <ul>
+          <li><a href="click-speed-test.html">Klickgeschwindigkeits-Test (CPS)</a></li>
+          <li><a href="reaction-time-test.html">Reaktionszeit-Test</a></li>
+          <li><a href="aim-trainer.html">Ziel- &amp; Gedächtnis-Challenge</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>MouseBench</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="index.html#about">Über uns</a></li>
+          <li><a href="privacy-policy.html">Datenschutzerklärung</a></li>
+          <li><a href="terms-of-use.html">Nutzungsbedingungen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MouseBench. Alle Tests laufen lokal in deinem Browser.</span>
+      <span>Gebaut für schnelles, übersichtliches Hardware-Testen.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/common.js"></script>
+<script>
+  window.L10N = {
+    'st_idle': 'bereit', 'st_measuring…': 'messend…', 'st_released': 'losgelassen',
+    'u_cm': ' cm', 'u_in1': ' Zoll', 'u_inN': ' Zoll',
+    'dpi_span_pre': 'Anzeigebreite ≈ ', 'dpi_span_win': ' px (Fenster ',
+    'dpi_stat_cm': 'DPCM geschätzt', 'dpi_stat_in': 'DPI geschätzt',
+    'dpi_sub_cm': 'geschätzte Punkte pro Zentimeter (DPCM)', 'dpi_sub_in': 'geschätzte DPI / CPI',
+    'dpi_vendor': 'Herstellerstandard (pro Zoll)',
+    'dpi_closest': 'Nächste Voreinstellung: ',
+    'dpi_none': 'Keine Messung — versuch es erneut',
+    'dpi_note_in': 'Geschätzt, nicht hardwaregenau',
+    'dpi_note_none': 'Drücke und halte innerhalb des Lineals, dann ziehe.',
+    'dpi_note_cm_tail': 'DPCM zählt die Punkte pro Zentimeter, die du bewegt hast. Die meisten Hersteller nennen DPI (Punkte pro Zoll), daher gilt DPCM ≈ DPI ÷ 2,54 — die metrische Zahl entspricht derselben Geschwindigkeit. Geschätzt, nicht hardwaregenau.'
+  };
+</script>
+<script src="../js/dpi-test.js"></script>
+</body>
+</html>

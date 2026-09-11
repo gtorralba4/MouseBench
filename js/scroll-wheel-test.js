@@ -121,7 +121,7 @@
       var hgt = Math.min(h / 2, Math.abs(d) / maxAbs * (h / 2));
       var y = h / 2 - ((d < 0 ? 0 : hgt));
       if (d < 0) y = h / 2;
-      cctx.fillStyle = d < 0 ? '#2563eb' : d > 0 ? '#16a34a' : '#94a3b8';
+      cctx.fillStyle = d < 0 ? '#0d9488' : d > 0 ? '#16a34a' : '#94a3b8';
       cctx.fillRect(bw, y, Math.max(1, bw - 1), Math.max(1, hgt));
     });
   }

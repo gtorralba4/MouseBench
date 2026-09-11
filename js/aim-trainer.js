@@ -108,7 +108,7 @@
     document.getElementById('resLevel').textContent = T('aim_cleared', 'Cleared ') + S.level + (S.level === 1 ? T('aim_round1', ' round') : T('aim_roundN', ' rounds'));
     document.getElementById('resTime').textContent = T('aim_time', 'Time ') + fmt.dec(S.totalTime / 1000, 1) + 's';
     document.getElementById('resAcc').textContent = T('aim_acc', 'Accuracy ') + acc + '%';
-    document.getElementById('resBest').textContent = T('aim_best', 'Best ') + S.best.score + ' (lvl ' + S.best.level + ')';
+    document.getElementById('resBest').textContent = T('aim_best', 'Best ') + S.best.score + T('aim_lvl', ' (lvl ') + S.best.level + ')';
     resultPanel.style.display = 'block';
     statLevel(); statCircles(); statBest();
   }
@@ -206,7 +206,7 @@
       ctx.beginPath();
       ctx.arc(cx, cy, rad - 2, 0, Math.PI * 2);
       ctx.stroke();
-      ctx.strokeStyle = '#3b82f6';
+      ctx.strokeStyle = '#10b981';
       ctx.lineWidth = 6;
       ctx.lineCap = 'round';
       ctx.beginPath();

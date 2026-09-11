@@ -54,7 +54,7 @@
     document.getElementById('cpsBest').textContent = fmt.dec(best, 1);
     document.getElementById('cpsResCps').textContent = fmt.dec(cps, 1);
     document.getElementById('cpsResCount').textContent = fmt.int(clicks) + T('cps_clicks', ' clicks');
-    document.getElementById('cpsResCpm').textContent = fmt.int(cpm) + ' CPM';
+    document.getElementById('cpsResCpm').textContent = fmt.int(cpm) + T('cps_cpm', ' CPM');
     var rank = cps < 4 ? T('cps_r1', 'Getting started') : cps < 7 ? T('cps_r2', 'Average') : cps < 10 ? T('cps_r3', 'Fast') : T('cps_r4', 'Blistering!');
     var chip = document.getElementById('cpsResRank');
     chip.textContent = rank;

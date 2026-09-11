@@ -48,7 +48,7 @@
   }
 
   function paintPressed(region) {
-    paint(region, '#bfdbfe', '#2563eb');
+    paint(region, '#a7f3d0', '#059669');
   }
   function paintReleased(region) {
     var el = regionEl(region);

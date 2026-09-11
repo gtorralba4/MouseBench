@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maustasten-Test — Prüfe jede Taste online</title>
+<meta name="description" content="Teste linke, rechte, mittlere und seitliche Maustasten an einem interaktiven Mausdiagramm. Erkennt Doppelklick-Prellen, klemmende Tasten und Mausrad-Input — alles in deinem Browser.">
+<link rel="canonical" href="https://mousebench.fyi/de/mouse-button-test/">
+<link rel="alternate" hreflang="de" href="https://mousebench.fyi/de/mouse-button-test/">
+<link rel="alternate" hreflang="en" href="https://mousebench.fyi/mouse-button-test/">
+<link rel="alternate" hreflang="es" href="https://mousebench.fyi/es/mouse-button-test/">
+<link rel="alternate" hreflang="x-default" href="https://mousebench.fyi/mouse-button-test/">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{var t=localStorage.getItem('mbt')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Maustasten-Test","applicationCategory":"UtilityApplication","operatingSystem":"Any","description":"Browserbasierter Maustasten-Tester mit interaktivem Diagramm und Doppelklickerkennung."}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark"><svg class="brand-svg" viewBox="0 0 24 24" width="25.2" height="25.2" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="#fff"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="#fff"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="#059669"/><circle cx="8.3" cy="17" r="1.2" fill="#059669"/><circle cx="15.7" cy="17" r="1.2" fill="#059669"/></g></g></svg></span><span>MouseBench</span></a>
+    <div class="lang-drop">
+      <button class="nav-toggle lang-toggle" id="langToggle" type="button" aria-haspopup="true" aria-expanded="false">Sprache <span aria-hidden="true">⌄</span></button>
+      <div class="nav-panel lang-panel" id="langPanel">
+        <a class="nav-link current" href="mouse-button-test.html" hreflang="de" aria-current="true"><span class="ico">🇩🇪</span>Deutsch</a>
+        <a class="nav-link" href="../es/mouse-button-test.html" hreflang="es"><span class="ico">🇪🇸</span>Español</a>
+        <a class="nav-link" href="../mouse-button-test.html" hreflang="en"><span class="ico">🇬🇧</span>English</a>
+      </div>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Zwischen hellem und dunklem Thema wechseln">
+      <svg class="theme-icon" viewBox="0 0 24 24" width="26.62" height="26.62" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="var(--icon-mouse)"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="var(--icon-mouse)"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="var(--icon-mouse)" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="var(--icon-accent)"/><circle cx="8.3" cy="17" r="1.2" fill="var(--icon-accent)"/><circle cx="15.7" cy="17" r="1.2" fill="var(--icon-accent)"/></g></g></svg>
+    </button>
+    <div class="menu-drop">
+      <button class="nav-toggle" id="navToggle" type="button" aria-haspopup="true" aria-expanded="false">Menü <span aria-hidden="true">⌄</span></button>
+      <nav class="nav-panel menu-panel" id="navPanel" aria-label="Alle Tools">
+      <div class="nav-group">Empfohlen</div>
+      <a class="nav-link" href="aim-trainer.html"><span class="ico">🎯</span>Ziel- &amp; Gedächtnis-Challenge</a>
+      <a class="nav-link" href="index.html"><span class="ico">⌂</span>Startseite</a>
+      <div class="nav-group">Maus-Tests</div>
+      <a class="nav-link" href="mouse-button-test.html"><span class="ico">🖱️</span>Maustasten-Test</a>
+      <a class="nav-link" href="dpi-test.html"><span class="ico">📏</span>DPI-Test</a>
+      <a class="nav-link" href="scroll-wheel-test.html"><span class="ico">🌀</span>Mausrad-Test</a>
+      <a class="nav-link" href="mouse-latency-test.html"><span class="ico">⚡</span>Maus-Latenz-Test</a>
+      <div class="nav-group">Geschwindigkeit &amp; Reflexe</div>
+      <a class="nav-link" href="click-speed-test.html"><span class="ico">💥</span>Klickgeschwindigkeits-Test (CPS)</a>
+      <a class="nav-link" href="reaction-time-test.html"><span class="ico">⏱️</span>Reaktionszeit-Test</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="page-zone">
+  <div class="container">
+    <div class="hero">
+      <span class="kicker">Hardware-Test</span>
+      <h1>Maustasten-Test</h1>
+      <p>Klicke jede Taste an deiner Maus und sieh zu, wie die entsprechende Zone im Diagramm aufleuchtet. Erkennt tote Tasten, Doppelklick-Prellen und verschlissene Mausräder.</p>
+    </div>
+
+    <div class="ad-slot leaderboard" data-ad-slot="MBT_LEADERBOARD">Werbeplatz · Leaderboard (728×90)</div>
+
+    <div class="stage">
+      <div class="stage-title">
+        <h2>Interaktives Mausdiagramm</h2>
+        <div class="pill-group" role="group" aria-label="Mausmodell">
+          <button class="pill active" data-model="3" type="button">3 Tasten</button>
+          <button class="pill" data-model="5" type="button">5 Tasten</button>
+          <button class="pill" data-model="9" type="button">MMO 9 Tasten</button>
+        </div>
+      </div>
+
+      <div class="diagram-wrap">
+        <svg class="diagram" id="mouseDiagram" viewBox="0 0 460 320" data-model="3" aria-label="Interaktives Mausdiagramm — klicke die Tasten deiner Maus, um die entsprechende Zone zum Leuchten zu bringen">
+          <g class="wheel-arrows">
+            <path data-wheel="up" d="M244 68 L258 68 251 58 Z" fill="#94a3b8"/>
+            <path data-wheel="down" d="M244 128 L258 128 251 138 Z" fill="#94a3b8"/>
+          </g>
+          <rect x="30" y="40" width="400" height="200" rx="48" fill="#eef1f6" stroke="#cbd5e1" stroke-width="2"/>
+          <path data-region="left" data-btn="0" d="M 200,48 L 52,48 Q 40,48 40,62 L 40,218 Q 40,232 52,232 L 200,232 Z" class="zone" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+          <path data-region="right" data-btn="2" d="M 268,48 L 398,48 Q 410,48 410,62 L 410,218 Q 410,232 398,232 L 268,232 Z" class="zone" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+          <rect data-region="middle" data-btn="1" x="222" y="78" width="42" height="66" rx="12" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+          <rect x="220" y="70" width="46" height="4" rx="2" fill="#cbd5e1"/>
+          <g class="g-side">
+            <rect data-region="back" data-btn="3" x="6" y="118" width="28" height="34" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+            <rect data-region="fwd" data-btn="4" x="6" y="158" width="28" height="34" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+          </g>
+          <g class="g-thumb">
+            <g>
+              <rect data-region="s1" x="40" y="142" width="34" height="30" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+              <rect data-region="s2" x="40" y="180" width="34" height="30" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+              <rect data-region="s3" x="40" y="98" width="34" height="30" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+            </g>
+            <g>
+              <rect data-region="s4" x="82" y="142" width="34" height="30" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+              <rect data-region="s5" x="82" y="180" width="34" height="30" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+              <rect data-region="s6" x="82" y="98" width="34" height="30" rx="9" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+            </g>
+          </g>
+          <text x="8" y="30" font-size="12" fill="#94a3b8" font-family="system-ui">Daumentasten an der linken Seite</text>
+        </svg>
+        <div class="chips" id="legend">
+          <span class="chip">Blau = gedrückt</span>
+          <span class="chip ok">Grün = getestet &amp; OK</span>
+          <span class="chip warn">Rot = Fehler erkannt</span>
+        </div>
+      </div>
+
+      <div class="stats-row" style="margin-top:18px;">
+        <div class="stat"><span class="label">Getestete Tasten</span><span class="value" id="coverage">0/0</span></div>
+        <div class="stat"><span class="label">Klicks gesamt</span><span class="value" id="totalClicks">0</span></div>
+        <div class="stat"><span class="label">Doppelklicks</span><span class="value" id="doubleClicks">0</span></div>
+        <div class="stat"><span class="label">Scrollstrecke</span><span class="value" id="scrollDist">0</span></div>
+        <div class="stat"><span class="label">Letzte Taste</span><span class="value" id="lastBtn">—</span></div>
+      </div>
+
+      <div class="stats-row" style="margin-top:10px;">
+        <div class="stat"><span class="label">Gehaltene Tasten</span><span class="value" id="heldBtns">0</span></div>
+        <div class="stat"><span class="label">Letztes Rad</span><span class="value" id="lastWheel">—</span></div>
+        <div class="stat"><span class="label">event.button</span><span class="value" id="rawButton">—</span></div>
+        <div class="stat"><span class="label">event.deltaY</span><span class="value" id="rawDelta">—</span></div>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;">
+        <button class="btn" id="resetSession" type="button">Sitzung zurücksetzen</button>
+        <a class="btn secondary" href="index.html">← Zurück zur Startseite</a>
+      </div>
+
+      <div class="result-panel card" id="eventLogCard" style="margin-top:18px;">
+        <h3>Ereignisprotokoll <span class="muted small">(letzte 12 Ereignisse)</span></h3>
+        <ul id="eventLog" style="list-style:none; margin:8px 0 0; padding:0; font-size:.85rem; font-variant-numeric:tabular-nums; max-height:220px; overflow:auto; display:grid; gap:3px;"></ul>
+      </div>
+      <div id="faultMsg" class="attn" style="display:none;"></div>
+    </div>
+
+    <div class="ad-slot rectangle" data-ad-slot="MBT_INCONTENT">Werbeplatz · Inhalt (336×280)</div>
+
+    <div class="grid-main has-sidebar">
+      <div>
+        <div class="card prose" style="margin-bottom:24px;">
+          <h2>So benutzt du den Maustest</h2>
+          <ul>
+            <li>Klicke die <strong>linke</strong>, <strong>rechte</strong>, <strong>mittlere</strong> und <strong>seitlichen</strong> Tasten an deiner physischen Maus und bestätige, dass die entsprechende Zone beim Drücken blau aufleuchtet.</li>
+            <li>Jede Zone wird <strong>grün</strong>, sobald sie getestet wurde. Ein rotes Aufblitzen beim Drücken bedeutet, dass Ereignisse feuerten, die es nicht hätten sein sollen.</li>
+            <li>Fahre über das Diagramm und <strong>drehe am Mausrad</strong> — beide Pfeile sollten aufleuchten. Der Scrollstrecken-Zähler zeigt, wie viel ein einzelner Schwung produziert.</li>
+            <li>Beobachte den <strong>Doppelklick-Zähler</strong>: Steigt er, während du bewusst langsam Einzelklicks machst, prellt der linke Schalter — das klassische Zeichen für Schalterverschleiß.</li>
+          </ul>
+          <h3>Mausmodell wechseln</h3>
+          <p>Wähle <strong>3 Tasten</strong>, <strong>5 Tasten</strong> oder <strong>MMO 9 Tasten</strong> über dem Diagramm. Das Diagramm passt sich an: Gaming-Mäuse bekommen Daumentasten. Beachte, dass Browser nur zwei verschiedene Seiten-Tasten-Werte melden (4 &amp; 5 / Zurück &amp; Vor) — weitere Daumentasten an MMO-Mäusen teilen sich diese Werte, also überprüfe zusätzliche Makros in der Herstellersoftware.</p>
+          <div class="notice"><strong>Tipp:</strong> Tasten 20–30 Mal in schneller Abfolge zu testen ist der beste Weg, um intermittierendes Prellen oder Schalterprobleme aufzudecken.</div>
+        </div>
+
+        <div class="card">
+          <h2>Häufig gestellte Fragen</h2>
+          <div class="faq" style="margin-top:8px;">
+            <details class="faq-item" open>
+              <summary>Was testet die Doppelklickerkennung tatsächlich?</summary>
+              <p>Sie zählt <code>dblclick</code>-Events. Steigt der Zähler, während du bewusst langsam Einzelklicks machst, prellt der linke Mikroschalter — das erste Stadium einer Doppelklick-Störung.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Warum leuchten meine zusätzlichen Daumentasten nicht auf?</summary>
+              <p>Browser melden nur zwei Seiten-Tasten-Events (Werte 3 und 4, normalerweise Zurück/Vor). Tasten darüber können von keiner Webseite einzeln erkannt werden — nutze Logitech G Hub, Razer Synapse oder Ähnliches, um sie zu testen.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Das Rechtsklick-Menü taucht ständig auf — kann ich es trotzdem testen?</summary>
+              <p>Das Kontextmenü wird innerhalb des Diagrammbereichs unterdrückt, sodass Rechtsklick dort normal funktioniert. Außerhalb dieses Bereichs gelten weiterhin die Standard-Browsermenüs.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Werden meine Mausdaten irgendwohin gesendet?</summary>
+              <p>Nein. Alles läuft lokal mit JavaScript; es wird keine Netzwerkanfrage abgesetzt.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+      <aside class="aside-sticky">
+        <div class="ad-slot sidebar" data-ad-slot="MBT_SIDEBAR">Werbeplatz · Seitenleiste (300×250)</div>
+        <div class="card">
+          <h3>Verwandte Tools</h3>
+          <div class="related" style="flex-direction:column;">
+            <a href="dpi-test.html">DPI-Test</a>
+            <a href="scroll-wheel-test.html">Mausrad-Test</a>
+            <a href="mouse-latency-test.html">Maus-Latenz-Test</a>
+            <a href="click-speed-test.html">Klickgeschwindigkeits-Test</a>
+            <a href="reaction-time-test.html">Reaktionszeit-Test</a>
+            <a href="aim-trainer.html">Ziel- &amp; Gedächtnis-Challenge</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Maus-Tests</h4>
+        <ul>
+          <li><a href="mouse-button-test.html">Maustasten-Test</a></li>
+          <li><a href="dpi-test.html">DPI-Test</a></li>
+          <li><a href="scroll-wheel-test.html">Mausrad-Test</a></li>
+          <li><a href="mouse-latency-test.html">Maus-Latenz-Test</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Geschwindigkeit &amp; Reflexe</h4>
+        <ul>
+          <li><a href="click-speed-test.html">Klickgeschwindigkeits-Test (CPS)</a></li>
+          <li><a href="reaction-time-test.html">Reaktionszeit-Test</a></li>
+          <li><a href="aim-trainer.html">Ziel- &amp; Gedächtnis-Challenge</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>MouseBench</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="index.html#about">Über uns</a></li>
+          <li><a href="privacy-policy.html">Datenschutzerklärung</a></li>
+          <li><a href="terms-of-use.html">Nutzungsbedingungen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MouseBench. Alle Tests laufen lokal in deinem Browser.</span>
+      <span>Gebaut für schnelles, übersichtliches Hardware-Testen.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/common.js"></script>
+<script>
+  window.L10N = {
+    'btn_left': 'Links', 'btn_right': 'Rechts', 'btn_middle': 'Mitte (Rad)',
+    'btn_back': 'Seite · Zurück', 'btn_fwd': 'Seite · Vor',
+    'btn_s1': 'Daumen 1', 'btn_s2': 'Daumen 2', 'btn_s3': 'Daumen 3',
+    'btn_s4': 'Daumen 4', 'btn_s5': 'Daumen 5', 'btn_s6': 'Daumen 6',
+    'mbt_switch': 'Umgeschaltet auf ', 'mbt_btn': '-Tasten-Diagramm',
+    'mbt_down': ' gedrückt (Taste ', 'mbt_up': ' losgelassen',
+    'mbt_noregion1': 'Taste ', 'mbt_noregion2': ' gedrückt — kein passender Bereich bei diesem Modell',
+    'mbt_dbl': 'Doppelklick erkannt (',
+    'mbt_fault': 'Der Doppelklick-Zähler steigt schneller als deine Klickrate — der linke Schalter könnte <strong>prellen</strong>. Halte zwischen einzelnen Klicks eine Pause und setze zum Bestätigen zurück.',
+    'mbt_mode': ' / Modus ', 'mbt_wheel': 'Rad ', 'mbt_reset': 'Sitzung zurückgesetzt',
+    'mbt_ready': 'Bereit — klicke deine Maustasten an. Rechtsklick ist im Diagramm aktiv.',
+    'dir_up': 'aufwärts', 'dir_down': 'abwärts'
+  };
+</script>
+<script src="../js/mouse-button-test.js"></script>
+</body>
+</html>

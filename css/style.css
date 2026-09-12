@@ -319,6 +319,11 @@ details.faq-item p { color: var(--ink-soft); font-size: .94rem; margin: 0; }
 }
 @media (max-width: 767px) { .ad-slot.leaderboard { display: none; } }
 @media (max-width: 640px) {
+  .header-inner {
+    flex-wrap: wrap; height: auto; min-height: var(--header-h);
+    padding-top: 8px; padding-bottom: 8px; row-gap: 8px; column-gap: 10px;
+  }
+  .nav-panel { top: calc(100% + 10px); }
   .page-zone { padding: 22px 0 38px; }
   .stats-row { gap: 8px; }
   .stat { min-width: 72px; padding: 8px 10px; }

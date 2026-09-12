@@ -128,7 +128,19 @@
           <p>Drücke die linke Taste innerhalb der roten Fläche und halte sie gedrückt. Nach einer zufälligen Verzögerung wechselt die Farbe auf Grün. Deine Aufgabe ist nur: schnelles Loslassen. Eine Messung in diesem Moment — zusätzlich zum Zufalls-Timing — verhindert, dass du den Bildwechsel antizipierst und die Zahl verfälschst.</p>
         </div>
         <div class="card">
-          <h2>Häufig gestellte Fragen</h2>
+          
+
+<section class="prose" id="guide">
+  <h2>Was die Ergebnisse wirklich bedeuten</h2>
+  <p>Der Test misst die End-to-End-Klicklatenz auf deiner Maschine: Klick, Betriebssystem, Browser, Bildschirmaktualisierung. Er enthält das Refresh-Timing deines Monitors, daher addiert ein 60-Hz-Display bis zu etwa 16 ms gegenüber 144 Hz. Es geht um den Vergleich von Hardware auf demselben Monitor, nicht um eine absolute Zahl.</p>
+  <ul>
+    <li>Moderne 1-kHz-Mäuse, kabelgebunden oder sauber entprellt, liegen meist nur wenige Millisekunden auseinander; große Lücken deuten auf Polling- oder Debounce-Unterschiede.</li>
+    <li>Vergleiche den Median über mindestens zehn Läufe – ein einzelner Klick ist nur Rauschen.</li>
+    <li>Systemeinstellungen (Low-Latency-Modus, höhere Polling-Rate) verändern das Ergebnis oft mehr als der Schalter der Maus selbst.</li>
+  </ul>
+  <p>Nutze für beide Mäuse denselben Browser und denselben Monitor, und vertraue nie einer Einzelmessung.</p>
+</section>
+<h2>Häufig gestellte Fragen</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
               <summary>Warum wird meine Zeit von so vielen Dingen beeinflusst?</summary>

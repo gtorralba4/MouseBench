@@ -157,7 +157,19 @@
           <div class="notice">For a hardware-exact measurement, use your vendor utility (G Hub, Synapse, iCUE). This page is the browser-safe approximation for when you don&rsquo;t have one installed.</div>
         </div>
         <div class="card">
-          <h2>Frequently asked questions</h2>
+          
+
+<section class="prose" id="guide">
+  <h2>What your results really mean</h2>
+  <p>The ruler measures how far the cursor actually travels over a fixed physical distance. From that you can estimate how many counts per inch the sensor reports, as long as the OS pointer speed is at 1:1 and acceleration is off. That is the closest a browser can get to a true DPI reading; OS mouse speed, screen scaling and acceleration all shift the number.</p>
+  <ul>
+    <li>400–800 DPI suits low-sensitivity aiming, 1600–3200 matches high-resolution 1440p and 4K screens, and anything higher mostly trades precision for speed.</li>
+    <li>eDPI (DPI times in-game sensitivity) is what actually determines cursor speed, so there is no single correct DPI.</li>
+    <li>If the test reads about 800 when the mouse is set to 400, the OS sensitivity is probably doubling movement — change the sensor, not the slider.</li>
+  </ul>
+  <p>Use the same mouse you game with, keep it flat on the desk and repeat the measurement three times; the median is the stable number.</p>
+</section>
+<h2>Frequently asked questions</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
               <summary>Is DPI the same as sensitivity?</summary>

@@ -133,7 +133,19 @@
           <div class="notice">La latencia real del hardware (actuación → evento) requiere una cámara de alta velocidad o una Nvidia LDAT. Ninguna web —ni la nuestra ni la de otros— puede leer latencia HID bruta desde JavaScript.</div>
         </div>
         <div class="card">
-          <h2>Preguntas frecuentes</h2>
+          
+
+<section class="prose" id="guide">
+  <h2>Lo que significan tus resultados</h2>
+  <p>Este test mide la latencia de clic extremo a extremo en tu equipo: clic, sistema, navegador, actualización de pantalla. Incluye el tiempo de refresco de tu monitor, así que una pantalla de 60 Hz añade hasta unos 16 ms frente a 144 Hz. La idea es comparar hardware en el mismo monitor, no perseguir un número absoluto.</p>
+  <ul>
+    <li>Los ratones modernos de 1 kHz, con cable o inalámbricos bien desbotados, suelen estar a unos pocos milisegundos; diferencias grandes apuntan a diferencias de polling o debounce.</li>
+    <li>Compara la mediana de al menos diez ejecuciones: un solo clic es puro ruido.</li>
+    <li>Los ajustes del sistema (modo de baja latencia, mayor tasa de polling) cambian el resultado más que el propio switch del ratón.</li>
+  </ul>
+  <p>Para comparar dos ratones usa el mismo navegador y el mismo monitor, y nunca te fíes de una sola medición.</p>
+</section>
+<h2>Preguntas frecuentes</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
               <summary>¿Por qué mi resultado cambia de una pasada a otra?</summary>

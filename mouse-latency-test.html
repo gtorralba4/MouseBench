@@ -133,7 +133,19 @@
           <div class="notice">True hardware latency (actuation → event) needs a high-speed camera or Nvidia LDAT. No website — ours or anyone else&rsquo;s — can read raw HID latency from JavaScript.</div>
         </div>
         <div class="card">
-          <h2>Frequently asked questions</h2>
+          
+
+<section class="prose" id="guide">
+  <h2>What your results really mean</h2>
+  <p>This test measures end-to-end click latency on your machine: click, operating system, browser, screen update. It includes your monitor refresh timing, so a 60 Hz display adds up to about 16 ms versus 144 Hz. The point is comparing hardware on the same monitor, not chasing an absolute number.</p>
+  <ul>
+    <li>Modern 1 kHz mice, wired or properly debounced wireless, are usually only a few milliseconds apart; big gaps point to polling or debounce differences.</li>
+    <li>Compare the median over at least ten runs — a single click is just noise.</li>
+    <li>System settings (low-latency mode, higher polling rate) can change results more than the mouse switch itself.</li>
+  </ul>
+  <p>When comparing two mice, use the same browser and the same monitor, and never trust a single-run number.</p>
+</section>
+<h2>Frequently asked questions</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
               <summary>Why does my result change run to run?</summary>

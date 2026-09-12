@@ -317,6 +317,7 @@ details.faq-item p { color: var(--ink-soft); font-size: .94rem; margin: 0; }
   .ad-slot.rectangle,
   .aside-sticky .ad-slot.sidebar { display: none; }
 }
+@media (max-width: 767px) { .ad-slot.leaderboard { display: none; } }
 @media (max-width: 640px) {
   .page-zone { padding: 22px 0 38px; }
   .stats-row { gap: 8px; }

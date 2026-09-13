@@ -174,6 +174,26 @@
   </ul>
   <p>The notch count per revolution varies with wheel design, so compare consistency in both directions rather than absolute numbers, and repeat ten flicks for a reliable reading.</p>
 </section>
+
+<section class="prose">
+  <h2>Complete guide: scroll wheels</h2>
+  <p>A scroll test measures the wheel’s detents: every notch should produce a small, similar step of scrolling — in the direction you turned it. Free-spin wheels deliberately skip that, and hybrid wheels switch between the two modes, which is why their readings look so different.</p>
+  <p>Wheels report lines or pixels through the OS scroll settings. The same physical notch can produce a huge or tiny value depending on the "lines per notch" setting in Windows or smooth-scrolling settings, so compare against your own settings, not against another mouse.</p>
+  <ul>
+    <li><strong>Detent feel</strong> how many notches per revolution (typically 24 on stepping wheels) shapes the reading.</li>
+    <li><strong>Free-spin / hybrid</strong> huge deltas and overshoot on the infinite mode are expected by design.</li>
+    <li><strong>Reverse / no scroll</strong> usually an OS setting or a tilt button, not a broken encoder.</li>
+  </ul>
+  <h3>How to get the most accurate result</h3>
+  <ol>
+    <li>Scroll five notches at a steady pace and watch whether each notch maps to a similar step.</li>
+    <li>Test both directions — a reverse or missing direction reveals tilt or OS issues.</li>
+    <li>Try free-spin mode separately: the reading changes by design there.</li>
+    <li>Set "lines per notch" to a fixed value for repeatable numbers.</li>
+  </ol>
+  <h3>Why your result looks wrong</h3>
+  <p>If the wheel shows the reverse direction, the OS or driver scroll direction is flipped (natural vs inverted). If free-spin shows nothing, the wheel is genuinely in its infinite mode or the OS smooth-scroll is eating small deltas.</p>
+</section>
 <h2>Frequently asked questions</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -188,6 +208,19 @@
               <summary>Does this work on touchpads?</summary>
               <p>Touchpads don&rsquo;t produce <code>wheel</code> events — this test is for physical mouse wheels only.</p>
             </details>
+            <details class="faq-item">
+              <summary>How many notches does a normal wheel have?</summary>
+              <p>Around 24 per full revolution on standard stepping wheels, and roughly 72–100 steps per screen length is typical use. Free-spin and tilt wheels differ by design — there is no universal number.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Why does my wheel scroll the "wrong" way?</summary>
+              <p>Scroll direction is an operating system and driver preference (natural vs inverted). Tilt buttons or a sideways wobble of the wheel can also produce apparent horizontal scrolling.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Does "free spin" break my readings?</summary>
+              <p>No. Free-spin is a mode without detents: deltas are large and carry on, and they are measured correctly — just differently. Switch to stepping mode when comparing like with like.</p>
+            </details>
+
           </div>
         </div>
       </div>

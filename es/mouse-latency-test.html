@@ -167,6 +167,26 @@
   </ul>
   <p>Para comparar dos ratones usa el mismo navegador y el mismo monitor, y nunca te fíes de una sola medición.</p>
 </section>
+
+<section class="prose">
+  <h2>Guía completa: latencia del ratón</h2>
+  <p>La latencia de clic es el tiempo entre tu pulsación y que el ordenador la registre. Este test mide un bucle de cambio de pantalla → clic, que incluye tu tiempo de reacción y el refresco de la pantalla — así que un solo número mezcla hardware, software y a ti.</p>
+  <p>La parte de hardware se divide en latencia del switch (cuánto tarda en cerrar), el camino sensor/receptor (cable, 2,4 GHz, Bluetooth) y el polling (cada cuánto reporta el ratón al sistema). Cada parte suma retrasos fijos pequeños; el polling suele dominar.</p>
+  <ul>
+    <li><strong>Latencia del switch</strong> normalmente 1–5 ms en switches gaming; un debounce defectuoso añade picos.</li>
+    <li><strong>Vía inalámbrica</strong> el 2,4 GHz moderno es prácticamente tan rápido como el cable; el Bluetooth clásico añade 4–10 ms.</li>
+    <li><strong>Polling</strong> 125 Hz puede retrasar hasta 8 ms; 1000 Hz hasta 1 ms.</li>
+  </ul>
+  <h3>Cómo conseguir el resultado más preciso</h3>
+  <ol>
+    <li>Ejecuta el test al menos cinco veces y compara el mejor tiempo, no la media.</li>
+    <li>Usa tu configuración real (mismo DPI, polling y cable).</li>
+    <li>Prueba en un momento tranquilo: un segundo de distracción cambia todo.</li>
+    <li>Repite con otro puerto USB para descartar limitaciones de polling.</li>
+  </ol>
+  <h3>Por qué tu resultado parece 'mal'</h3>
+  <p>Si tus números varían 20–30 ms entre intentos, es ruido humano de reacción normal. Solo el mejor de varios intentos se acerca a la latencia real clic-sistema; las medias las dominan tus reflejos, no el ratón.</p>
+</section>
 <h2>Preguntas frecuentes</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -181,6 +201,19 @@
               <summary>¿Afecta la tasa de refresco?</summary>
               <p>Sí. El estímulo se muestra en el siguiente límite de fotograma, así que una pantalla de 60 Hz añade hasta ~16 ms frente a una de 144 Hz. Compara los ratones en el mismo monitor.</p>
             </details>
+            <details class="faq-item">
+              <summary>¿Hoy es más rápido por cable o inalámbrico?</summary>
+              <p>Las implementaciones modernas de 2,4 GHz (Logitech Lightspeed, Razer HyperSpeed, etc.) son indistinguibles del cable en la práctica. El Bluetooth clásico es la opción lenta: normalmente 4–10 ms más para el evento del botón.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿El polling marca una diferencia visible?</summary>
+              <p>Un ratón de 125 Hz reporta hasta cada 8 ms; 500 Hz cada 2 ms; 1000 Hz cada 1 ms. Entre 500 y 1000 la diferencia es casi teórica; el salto de 125 a 500 es la mejora visible.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Puedo medir aparte la latencia pura del switch?</summary>
+              <p>No desde el navegador: este ve el estado después del SO y el driver. Las APIs de tiempo del sistema solo exponen el evento final, así que el test reporta toda la pila; medir solo el switch requiere hardware de medición.</p>
+            </details>
+
           </div>
         </div>
       </div>

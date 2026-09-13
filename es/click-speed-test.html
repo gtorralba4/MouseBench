@@ -174,6 +174,26 @@
   </ul>
   <p>Usa siempre el botón izquierdo y mantén la misma duración al comparar resultados.</p>
 </section>
+
+<section class="prose">
+  <h2>Guía completa: velocidad de clic (CPS)</h2>
+  <p>El CPS cuenta cuántos clics de ratón registra el sistema en un segundo. El techo no depende solo de tus dedos: el tiempo de debounce del switch y el polling deciden si las pulsaciones rápidas llegan como clics separados o se funden en uno.</p>
+  <p>La técnica es la variable real. El clic normal se estabiliza en 6–8 CPS; el jitter (temblor del dedo) y el butterfly (alternar dos dedos en un botón) superan 10–15, pero pagan ese número en comodidad y desgaste del switch.</p>
+  <ul>
+    <li><strong>Debounce</strong> un debounce largo (30+ ms) limita la velocidad bruta porque fusiona clics rápidos.</li>
+    <li><strong>Polling</strong> 125 Hz reporta cada ~8 ms, así que los dobles clics de menos de 8 ms pueden perderse.</li>
+    <li><strong>Consistencia</strong> las rondas cortas premian la velocidad punta; las largas miden resistencia.</li>
+  </ul>
+  <h3>Cómo conseguir el resultado más preciso</h3>
+  <ol>
+    <li>Usa el botón izquierdo y un ratón físico, no un touchpad.</li>
+    <li>Elige una duración y compara siempre contra ella.</li>
+    <li>Haz clic siempre en el mismo punto para evitar fallos de borde.</li>
+    <li>Calienta primero: los récords de velocidad necesitan mano templada.</li>
+  </ol>
+  <h3>Por qué tu resultado parece 'mal'</h3>
+  <p>Si tu puntuación cae de pronto, revisa el polling USB y prueba un puerto trasero. Si una ráfaga muy rápida marca menos clics que pulsaciones, el debounce los fusiona — eso es hardware, no tu puntería. Compara cosas comparables: misma duración, mismo botón.</p>
+</section>
 <h2>Preguntas frecuentes</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -188,6 +208,19 @@
               <summary>¿Qué botón del ratón debería usar?</summary>
               <p>Usa el <strong>botón izquierdo</strong> para una comparación coherente. Los ratones de gama alta con interruptores más ligeros y un polling más rápido (500–1000 Hz) tienden a registrar los clics rápidos con más fiabilidad.</p>
             </details>
+            <details class="faq-item">
+              <summary>¿Cuál es el récord de CPS?</summary>
+              <p>El clic normal llega a ~6–8 CPS. Con jitter o butterfly los récords manuales superan 15+; los macros y trucos de vibración van más alto, pero no son juego normal.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Por qué mi puntuación se siente inferior a mis clics?</summary>
+              <p>Cuenta clics registrados. El debounce, el polling de 125/250 Hz y la pérdida de paquetes se comen las ráfagas rápidas — sobre todo por encima de 10 CPS. Un ratón de 1000 Hz reduce la diferencia.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿El número de 60 segundos siempre es menor?</summary>
+              <p>Sí. Las rondas cortas capturan la velocidad punta; las largas la resistencia, así que la media baja por diseño. Compara solo resultados de la misma duración.</p>
+            </details>
+
           </div>
         </div>
       </div>

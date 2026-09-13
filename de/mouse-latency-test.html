@@ -162,6 +162,26 @@
   </ul>
   <p>Nutze für beide Mäuse denselben Browser und denselben Monitor, und vertraue nie einer Einzelmessung.</p>
 </section>
+
+<section class="prose">
+  <h2>Komplette Anleitung: Eingabelatenz</h2>
+  <p>Klick-Latenz ist die Zeit zwischen deinem Fingerdruck und der Registrierung durch den Computer. Dieser Test misst eine Bildschirmwechsel → Klick-Schleife, die deine Reaktionszeit und den Monitor-Refresh mit einschließt — eine einzelne Zahl mischt also Hardware, Software und dich.</p>
+  <p>Der Hardware-Teil zerfällt in Schalter-Latenz (wie schnell der Schalter schließt), Sensor-/Empfängerpfad (Kabel, 2,4 GHz, Bluetooth) und Polling (wie oft die Maus ans System meldet). Jeder Teil addiert kleine feste Verzögerungen; meist dominiert das Polling.</p>
+  <ul>
+    <li><strong>Schalter-Latenz</strong> typisch 1–5 ms bei Gaming-Schaltern; defektes Debounce fügt Spikes hinzu.</li>
+    <li><strong>Kabelloser Pfad</strong> modernes 2,4 GHz ist praktisch kabel-schnell; klassisches Bluetooth +4–10 ms.</li>
+    <li><strong>Polling-Rate</strong> 125 Hz verzögert bis 8 ms, 1000 Hz bis 1 ms.</li>
+  </ul>
+  <h3>So erzielst du das genaueste Ergebnis</h3>
+  <ol>
+    <li>Den Test mindestens fünfmal laufen lassen und die beste Zeit vergleichen, nicht den Schnitt.</li>
+    <li>Dein In-Game-Setup verwenden (gleiches DPI, Polling und Kabel).</li>
+    <li>In einem ruhigen Moment testen — eine Sekunde Ablenkung verschiebt alles.</li>
+    <li>Einen anderen USB-Port probieren, um Polling-Drosselung auszuschließen.</li>
+  </ol>
+  <h3>Warum dein Ergebnis 'falsch' aussieht</h3>
+  <p>Schwanken deine Werte zwischen den Läufen um 20–30 ms, ist das normales menschliches Reaktionsrauschen. Nur die beste Zeit mehrerer Läufe nähert sich der echten Klick-zu-OS-Latenz; der Durchschnitt wird von deinen Reflexen dominiert, nicht von der Maus.</p>
+</section>
 <h2>Häufig gestellte Fragen</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -176,6 +196,19 @@
               <summary>Warum sind alle meine Messungen gleich?</summary>
               <p>Bei stabilen Bedingungen und festem Display-Refresh-Einfluss kann das natürliche sein. Wenn sie bei Rauschen genau identisch bleiben, hat vermutlich der Browser die Events zusammengelegt oder dein Display liefert zu wenig Refresh-Varianten.</p>
             </details>
+            <details class="faq-item">
+              <summary>Ist Kabel heute schneller als Funk?</summary>
+              <p>Moderne 2,4-GHz-Implementierungen (Logitech Lightspeed, Razer HyperSpeed u. a.) sind praktisch vom Kabel nicht mehr zu unterscheiden. Klassisches Bluetooth ist die langsame Option: meist 4–10 ms mehr für das Button-Event.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Macht die Polling-Rate sichtbar etwas aus?</summary>
+              <p>Eine 125-Hz-Maus meldet bis alle 8 ms, 500 Hz alle 2 ms, 1000 Hz alle 1 ms. Zwischen 500 und 1000 ist der Unterschied meist theoretisch; der Sprung von 125 auf 500 ist der sichtbare Gewinn.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Kann ich die reine Schalter-Latenz separat messen?</summary>
+              <p>Nicht aus dem Browser — er sieht den Zustand nach OS und Treiber. Die Zeit-APIs des Systems liefern nur das finale Event; dieser Test zeigt also den ganzen Pfad, Schalter-only braucht Spezialhardware.</p>
+            </details>
+
           </div>
         </div>
       </div>

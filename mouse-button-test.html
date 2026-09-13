@@ -210,6 +210,26 @@
   </ul>
   <p>Compare left against right: if only the left switch bounces, it is the switch, not your system. Twenty to thirty fast presses expose intermittent bounces better than slow ones.</p>
 </section>
+
+<section class="prose">
+  <h2>Complete guide: mouse button testing</h2>
+  <p>A mouse button test watches the raw click events your mouse emits: which button fired, how many times, and whether a click arrived as one clean press or as a double. That is exactly the signal a game sees, so a button that misses or chatters here will do the same under pressure.</p>
+  <p>Most gaming builds use mechanical switches rated for tens of millions of clicks. They wear out by contact degradation: the switch starts to bounce or stop registering, producing double-click or missed-click symptoms even when the shell looks new.</p>
+  <ul>
+    <li><strong>Double-click</strong> one press registering as two: the classic first sign of a worn or oxidised switch.</li>
+    <li><strong>Missed clicks</strong> a press that never registers, common with failing mechanical switches or a weak contact spring.</li>
+    <li><strong>Hot spots</strong> double-clicks that only appear on one edge of the button, typical of uneven switch wear.</li>
+  </ul>
+  <h3>How to get the most accurate result</h3>
+  <ol>
+    <li>Click each button 10–20 times at a rhythm close to your real use.</li>
+    <li>Keep your finger in the same spot the whole time — edges stress a different part of the switch.</li>
+    <li>Repeat the round once the mouse has warmed up; worn switches fail more visibly when warm.</li>
+    <li>Test the same buttons wireless and wired to separate transport issues from switch issues.</li>
+  </ol>
+  <h3>Why your result looks wrong</h3>
+  <p>A single double-click can be a stray event, especially in the first seconds after plugging in. Repeat the round a few times: a pattern that reproduces in several rounds is a real switch fault, while a random one-off usually is not.</p>
+</section>
 <h2>Frequently asked questions</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -228,6 +248,19 @@
               <summary>Does this send my mouse data anywhere?</summary>
               <p>No. Everything runs locally with JavaScript; no network request is made.</p>
             </details>
+            <details class="faq-item">
+              <summary>What causes double-clicking in gaming mice?</summary>
+              <p>Mainly mechanical switches. The contact spring loses tension or the contact pads oxidise over time, so the switch bounces and reports two presses. Shell tension and known first-year faults in certain models play a part too.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can a switch miss clicks even when it feels fine?</summary>
+              <p>Yes. A switch that has begun to fail can oscillate between clean and missed presses depending on temperature, grip and click speed. If the miss repeats across several rounds, plan a replacement or a higher debounce time.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can a USB hub or extension cable change my results?</summary>
+              <p>Transmission faults show up as missed or doubled clicks. Plug directly into a rear port; hubs, long extension cables and aggressive USB power saving make button events less reliable.</p>
+            </details>
+
           </div>
         </div>
       </div>

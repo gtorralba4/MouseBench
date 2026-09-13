@@ -174,6 +174,26 @@
   </ul>
   <p>Die Rastenzahl pro Umdrehung unterscheidet sich je nach Bauform. Vergleiche deshalb die Konsistenz in beide Richtungen statt absoluter Zahlen, und wiederhole zehn Drehungen für einen belastbaren Wert.</p>
 </section>
+
+<section class="prose">
+  <h2>Komplette Anleitung: Mausrad</h2>
+  <p>Ein Scroll-Test misst die Rastungen des Rades: Jede Kerbe sollte einen kleinen, ähnlichen Scrollschritt erzeugen — in die Richtung, in die du drehst. Freilauf-Räder überspringen das absichtlich, und Hybridräder wechseln zwischen den Modi, weshalb ihre Werte so unterschiedlich aussehen.</p>
+  <p>Räder melden Zeilen oder Pixel über die Scroll-Einstellungen des Systems. Dieselbe Kerbe kann je nach Zeilen pro Rastung in Windows oder Smooth-Scrolling riesig oder winzig sein — vergleiche daher mit deinen eigenen Einstellungen, nicht mit einer anderen Maus.</p>
+  <ul>
+    <li><strong>Rastungen</strong> Kerben pro Umdrehung (typisch 24 bei Rastenrädern) formen das Ergebnis.</li>
+    <li><strong>Freilauf / Hybrid</strong> große Deltas und Nachlauf im Endlosmodus sind konstruktionsbedingt.</li>
+    <li><strong>Rückwärts / kein Scrollen</strong> meist OS-Einstellung oder Tilt-Button, kein defekter Encoder.</li>
+  </ul>
+  <h3>So erzielst du das genaueste Ergebnis</h3>
+  <ol>
+    <li>Fünf Kerben im Takt scrollen und darauf achten, ob jede eine ähnliche Stufe liefert.</li>
+    <li>Beide Richtungen testen — umgekehrte oder fehlende Richtung deutet auf Tilt- oder OS-Probleme.</li>
+    <li>Freilauf separat testen: das Signal ändert sich konstruktionsbedingt.</li>
+    <li>„Zeilen pro Rastung“ auf einen festen Wert stellen für reproduzierbare Zahlen.</li>
+  </ol>
+  <h3>Warum dein Ergebnis 'falsch' aussieht</h3>
+  <p>Scrollt das Rad rückwärts, ist in OS oder Treiber die Richtung umgekehrt (natürlich/invertiert). Zeigt Freilauf nichts, ist das Rad wirklich im Endlosmodus oder Smooth-Scrolling schluckt kleine Deltas.</p>
+</section>
 <h2>Häufig gestellte Fragen</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -188,6 +208,19 @@
               <summary>Funktioniert das mit Touchpads?</summary>
               <p>Touchpads erzeugen keine <code>wheel</code>-Events — dieser Test ist nur für physische Mausräder gedacht.</p>
             </details>
+            <details class="faq-item">
+              <summary>Wie viele Rastungen hat ein normales Mausrad?</summary>
+              <p>Etwa 24 pro Umdrehung bei Standard-Rastenrädern; typisch im Gebrauch sind 72–100 Stufen pro Bildschirmlänge. Freilauf- und Tilt-Räder sind konstruktionsbedingt anders — eine universelle Zahl gibt es nicht.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Warum scrollt mein Rad in die "falsche" Richtung?</summary>
+              <p>Die Scrollrichtung ist eine Einstellung von Betriebssystem und Treiber (natürlich vs. invertiert). Auch Tilt-Tasten oder seitliches Wobblen des Rades können scheinbar horizontales Scrollen erzeugen.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Macht "Freilauf" meine Messung kaputt?</summary>
+              <p>Nein. Freilauf ist ein Modus ohne Rasterung: Deltas sind groß und laufen nach — gemessen wird trotzdem korrekt, nur anders. Für einen fairen Vergleich in den Rastmodus wechseln.</p>
+            </details>
+
           </div>
         </div>
       </div>

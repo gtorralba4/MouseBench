@@ -191,6 +191,27 @@
   </ul>
   <p>Use the same mouse you game with, keep it flat on the desk and repeat the measurement three times; the median is the stable number.</p>
 </section>
+
+<section class="prose">
+  <h2>Complete DPI guide for gamers</h2>
+  <p>DPI (dots per inch, technically CPI — counts per inch) tells you how many movement counts the mouse sensor reports for every physical inch you slide it. An 800 DPI mouse sends 800 counts per inch; a 1600 DPI mouse sends twice as many. What the cursor ends up doing on screen also depends on the operating system pointer speed on top of that.</p>
+  <p>In practice, DPI is a zoom, not a precision knob. Higher DPI with a lower in-game sensitivity moves your aim the same distance — only the sensor resolution and how the game reads it change. That is why comparing raw DPI numbers between mice is rarely useful; what matters is the combination you are comfortable with.</p>
+  <ul>
+    <li><strong>400 DPI</strong> classic low-sensitivity aiming (CS, Valorant), paired with in-game sensitivities around 0.3–1.</li>
+    <li><strong>800 DPI</strong> the most common step today — half the desktop jumpiness, same game feel if you halve sensitivity.</li>
+    <li><strong>1600 DPI</strong> fits dense 1440p screens well and is what a growing share of FPS pros use.</li>
+    <li><strong>3200 DPI</strong> for 4K desktops and high-CPI workflows; rarely a gain for aim.</li>
+  </ul>
+  <h3>How to get the most accurate result</h3>
+  <ol>
+    <li>Set Windows pointer speed to 6/11 (exactly the middle) and disable it; if on Windows also disable "Enhance pointer precision".</li>
+    <li>Keep the mouse flat on the pad, hold the button and drag slowly along the ruler line.</li>
+    <li>Run the test three times and take the median — a single fast drag usually reads low.</li>
+    <li>If your mouse has adjustable lift-off distance, a low LOD keeps the drag consistent.</li>
+  </ol>
+  <h3>Why your result looks wrong</h3>
+  <p>If the test shows roughly double your configured DPI, Windows pointer speed (or a driver curve) is scaling movement — fix that, not the mouse. If it shows about half, a 1:2 hardware step or display zoom is involved. The browser only ever sees post-OS movement, so run the checklist above before judging the result.</p>
+</section>
 <h2>Frequently asked questions</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -205,6 +226,23 @@
               <summary>My mouse reports no movement during the drag.</summary>
               <p>Make sure you press and hold inside the ruler first, and don&rsquo;t lift the mouse mid-drag. Dragging too fast can also hit the high-frequency movement sensor limits in some browsers.</p>
             </details>
+            <details class="faq-item">
+              <summary>Does a higher DPI mean better precision?</summary>
+              <p>Not for aiming. Precision comes from the sensor’s accuracy and polling rate, not from the count. Higher DPI just produces more counts per inch; if you lower in-game sensitivity to compensate, the aim distance stays identical.</p>
+            </details>
+            <details class="faq-item">
+              <summary>400, 800 or 1600 — which should I use?</summary>
+              <p>Start at 800 with a sensitivity that lets you turn 180° smoothly, then halve or double the DPI and adjust sensitivity in the opposite direction. Choose whichever feels smoothest — performance is the same when eDPI is held constant.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What DPI do professional gamers use?</summary>
+              <p>Survey data from pro FPS players clusters around 400–800 with low sensitivities (eDPI roughly 300–1000). A growing share uses 1600 and halves their sensitivity to keep the same eDPI while gaining a smoother desktop feel.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Will "Enhance pointer precision" change my result?</summary>
+              <p>Yes. Windows mouse acceleration modifies the pointer curve, so the browser sees more pixels than the sensor actually reports at slow speeds. Disable it before testing for a number that matches your mouse’s real CPI.</p>
+            </details>
+
           </div>
         </div>
       </div>

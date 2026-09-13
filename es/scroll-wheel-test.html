@@ -174,6 +174,26 @@
   </ul>
   <p>El número de muescas por vuelta varía según el diseño, así que compara la consistencia en ambas direcciones en lugar de valores absolutos, y repite diez giros para una lectura fiable.</p>
 </section>
+
+<section class="prose">
+  <h2>Guía completa: rueda de desplazamiento</h2>
+  <p>El test de la rueda mide sus detentes: cada muesca debería producir un paso de scroll pequeño y similar, en la dirección en la que giras. Las ruedas de giro libre omiten eso a propósito, y las híbridas alternan entre ambos modos — por eso sus lecturas se ven tan distintas.</p>
+  <p>Las ruedas reportan líneas o píxeles a través de los ajustes de scroll del sistema. La misma muesca física puede dar un valor enorme o diminuto según las líneas por muesca de Windows o el scroll suave; compara contra tu propia configuración, no contra otro ratón.</p>
+  <ul>
+    <li><strong>Detentes</strong> las muescas por vuelta (típicamente 24 en ruedas con paso) forman la lectura.</li>
+    <li><strong>Giro libre / híbrida</strong> deltas grandes y rebote en el modo infinito, esperable por diseño.</li>
+    <li><strong>A la inversa / sin scroll</strong> normalmente ajuste del sistema o botón de inclinación, no un encoder roto.</li>
+  </ul>
+  <h3>Cómo conseguir el resultado más preciso</h3>
+  <ol>
+    <li>Gira cinco muescas a ritmo constante y mira que cada una dé un paso similar.</li>
+    <li>Prueba ambas direcciones: la inversa o ausente delata problemas de inclinación o del sistema.</li>
+    <li>Prueba el giro libre aparte: el valor cambia por diseño.</li>
+    <li>Fija las líneas por muesca a un valor estable para números repetibles.</li>
+  </ol>
+  <h3>Por qué tu resultado parece 'mal'</h3>
+  <p>Si la rueda muestra dirección inversa, está volcada la dirección en el sistema o el driver (natural/invertida). Si el giro libre no marca nada, la rueda está en modo infinito o el scroll suave se come los deltas pequeños.</p>
+</section>
 <h2>Preguntas frecuentes</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -188,6 +208,19 @@
               <summary>¿Funciona esto con paneles táctiles?</summary>
               <p>Los paneles táctiles no producen eventos de <code>wheel</code>: esta prueba es solo para ruedas físicas de ratón.</p>
             </details>
+            <details class="faq-item">
+              <summary>¿Cuántas muescas tiene una rueda normal?</summary>
+              <p>Unas 24 por vuelta en ruedas con paso estándar; el uso típico es 72–100 pasos por longitud de pantalla. Las de giro libre y de inclinación difieren por diseño: no existe un número universal.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Por qué mi rueda hace scroll al revés?</summary>
+              <p>La dirección de scroll es una preferencia del sistema y del driver (natural frente a invertida). Los botones de inclinación o un bamboleo lateral de la rueda también pueden producir scroll horizontal aparente.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿El giro libre rompe mis lecturas?</summary>
+              <p>No. El giro libre es un modo sin detentes: los deltas son grandes y arrastran, y se miden correctamente — solo distinto del modo con paso. Para comparar de igual a igual, vuelve al modo de muescas.</p>
+            </details>
+
           </div>
         </div>
       </div>

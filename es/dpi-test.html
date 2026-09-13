@@ -191,6 +191,27 @@
   </ul>
   <p>Usa la misma configuración con la que juegas, mantén el ratón perfectamente plano y repite la medición tres veces; la mediana es la cifra estable.</p>
 </section>
+
+<section class="prose">
+  <h2>Guía completa de DPI para gamers</h2>
+  <p>El DPI (puntos por pulgada; en realidad CPI, counts per inch) indica cuántos incrementos de movimiento reporta el sensor por cada pulgada física que deslizas el ratón. Un ratón de 800 DPI envía 800 counts por pulgada; uno de 1600, el doble. Lo que el cursor recorre en pantalla depende además de la velocidad del puntero del sistema.</p>
+  <p>En la práctica el DPI es un zoom, no una perilla de precisión. DPI más alto con sensibilidad baja en el juego mueve tu puntería igual de lejos — solo cambia la resolución del sensor y cómo lo lee el juego. Por eso comparar números crudos de DPI entre ratones rara vez sirve; importa la combinación con la que te sientas cómodo.</p>
+  <ul>
+    <li><strong>400 DPI</strong> clásico para sensibilidad baja (CS, Valorant), con sensibilidades en juego de ~0,3–1.</li>
+    <li><strong>800 DPI</strong> el paso más habitual: la mitad de salto en el escritorio y mismo tacto en el juego si divides la sensibilidad por 2.</li>
+    <li><strong>1600 DPI</strong> encaja con pantallas densas 1440p y lo usan cada vez más pros de FPS.</li>
+    <li><strong>3200 DPI</strong> para escritorios 4K y flujos de CPI altos; rara vez mejora la puntería.</li>
+  </ul>
+  <h3>Cómo conseguir el resultado más preciso</h3>
+  <ol>
+    <li>Velocidad del puntero de Windows en 6/11 (el centro) y desactivada; en Windows además "Mejorar precisión del puntero" desactivado.</li>
+    <li>Ratón plano sobre la alfombrilla, mantener pulsado y arrastrar despacio por la línea de la regla.</li>
+    <li>Repite tres veces y quédate con la mediana — un arrastre rápido y único suele leer bajo.</li>
+    <li>Si tu ratón ajusta la altura de elevación, un LOD bajo hace el arrastre más constante.</li>
+  </ol>
+  <h3>Por qué tu resultado parece 'mal'</h3>
+  <p>Si el test marca el doble de tu DPI configurado, la velocidad del puntero de Windows (o una curva del driver) está escalando el movimiento — cambia eso, no el ratón. Si marca la mitad, hay un paso de hardware 1:2 o zoom de pantalla. El navegador solo ve el movimiento después del sistema operativo.</p>
+</section>
 <h2>Preguntas frecuentes</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -205,6 +226,23 @@
               <summary>Mi ratón no informa de movimiento durante el arrastre.</summary>
               <p>Asegúrate de pulsar y mantener dentro de la regla primero, y no levantes el ratón en mitad del arrastre. Arrastrar demasiado rápido también puede alcanzar los límites de muestreo de alta frecuencia en algunos navegadores.</p>
             </details>
+            <details class="faq-item">
+              <summary>¿DPI más alto significa mejor precisión?</summary>
+              <p>No para apuntar. La precisión viene de la exactitud del sensor y la frecuencia de polling, no de los counts. Un DPI mayor solo produce más counts por pulgada; si bajas la sensibilidad en juego para compensar, la distancia de puntería es idéntica.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿400, 800 o 1600 — cuál uso?</summary>
+              <p>Empieza en 800 con una sensibilidad que te permita girar 180° con suavidad, y luego duplica o divide el DPI ajustando la sensibilidad al revés. Elige la más fluida — con el mismo eDPI el rendimiento es igual.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Qué DPI usan los profesionales?</summary>
+              <p>Las encuestas a pros de FPS se agrupan en 400–800 con sensibilidad baja (eDPI de ~300–1000). Cada vez más usan 1600 y dividen la sensibilidad a la mitad para mantener su eDPI con un escritorio más suave.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿"Mejorar precisión del puntero" cambia mi resultado?</summary>
+              <p>Sí. La aceleración de Windows altera la curva del puntero, así que a baja velocidad el navegador ve más píxeles de los que el sensor reporta. Desactívala antes del test para que el número coincida con tu CPI real.</p>
+            </details>
+
           </div>
         </div>
       </div>

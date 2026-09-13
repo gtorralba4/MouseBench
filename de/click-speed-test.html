@@ -174,6 +174,26 @@
   </ul>
   <p>Nutze für Vergleiche immer die linke Taste und halte die Laufdauer identisch.</p>
 </section>
+
+<section class="prose">
+  <h2>Komplette Anleitung: Klickgeschwindigkeit (CPS)</h2>
+  <p>CPS zählt, wie viele Mausklicks das System in einer Sekunde registriert. Die Obergrenze liegt nicht nur in deinen Fingern: Entprellzeit des Schalters und Polling-Rate entscheiden, ob schnelle Drücke als getrennte Klicks ankommen oder zu einem verschmelzen.</p>
+  <p>Die Technik ist die eigentliche Variable. Normales Klicken plateaue bei 6–8 CPS; Jitter (zitternder Finger) und Butterfly (Zwei-Finger-Wechsel auf eine Taste) drücken über 10–15 — kosten aber Komfort und Schalterverschleiß.</p>
+  <ul>
+    <li><strong>Debounce</strong> lange Entprellzeit (30+ ms) begrenzt die Rohgeschwindigkeit, weil sie schnelle Klicks verschmilzt.</li>
+    <li><strong>Polling</strong> 125 Hz meldet etwa alle 8 ms, dadurch können Doppelklicks unter 8 ms verloren gehen.</li>
+    <li><strong>Beständigkeit</strong> kurze Runden zeigen Maximalspeed, lange die Ausdauer.</li>
+  </ul>
+  <h3>So erzielst du das genaueste Ergebnis</h3>
+  <ol>
+    <li>Linke Taste und eine physische Maus verwenden, kein Touchpad.</li>
+    <li>Eine Dauer wählen und immer dagegen vergleichen.</li>
+    <li>Immer dieselbe Stelle klicken, um Kantenfehler zu vermeiden.</li>
+    <li>Vorher aufwärmen — Geschwindigkeitsrekorde brauchen eine warme Hand.</li>
+  </ol>
+  <h3>Warum dein Ergebnis 'falsch' aussieht</h3>
+  <p>Sinkt die Punktzahl plötzlich, prüfe das USB-Polling und einen rückwärtigen Port. Zeigt ein sehr schneller Lauf weniger Klicks als Drücke, verschmilzt die Entprellung sie — das ist Hardware, nicht dein Timing. Vergleiche Gleiches: gleiche Dauer, gleiche Taste.</p>
+</section>
 <h2>Häufig gestellte Fragen</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -188,6 +208,19 @@
               <summary>Welche Maustaste sollte ich verwenden?</summary>
               <p>Nutze die <strong>linke Taste</strong> für einen konsistenten Vergleich. Hochwertige Mäuse mit leichteren Schaltern und schnellerer Abfrage (500–1000 Hz) registrieren schnelle Klicks tendenziell zuverlässiger.</p>
             </details>
+            <details class="faq-item">
+              <summary>Was ist der CPS-Rekord?</summary>
+              <p>Normales Klicken erreicht ~6–8 CPS. Mit Jitter- oder Butterfly-Technik kommen Handklickrekorde über 15+; Makros und Schütteltricks gehen höher, gehören aber nicht zum normalen Spiel.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Warum fühlt sich meine Punktzahl niedriger an als meine Klicks?</summary>
+              <p>Gezählt werden registrierte Klicks. Entprellzeit, 125/250-Hz-Polling und Paketverluste fressen schnelle Bursts — am deutlichsten über 10 CPS. Eine 1000-Hz-Maus verkleinert die Lücke.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Ist die 60-Sekunden-Zahl immer niedriger?</summary>
+              <p>Ja. Kurze Runden messen die Spitze, lange die Ausdauer, daher sinkt der Schnitt konstruktionsbedingt. Vergleiche nur Ergebnisse mit derselben Dauer.</p>
+            </details>
+
           </div>
         </div>
       </div>

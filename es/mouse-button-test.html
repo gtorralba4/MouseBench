@@ -210,6 +210,26 @@
   </ul>
   <p>Compara izquierda y derecha: si solo rebota la izquierda, es el switch, no tu sistema. Veinte o treinta clics rápidos destapan rebotes intermitentes mejor que los lentos.</p>
 </section>
+
+<section class="prose">
+  <h2>Guía completa: test de botones del ratón</h2>
+  <p>Un test de botones observa los eventos de clic en bruto que emite tu ratón: qué botón, cuántas veces y si el clic llega como una pulsación limpia o como un doble. Es exactamente la señal que ve un juego: un botón que falla o se duplica aquí hará lo mismo bajo presión.</p>
+  <p>La mayoría de ratones gaming usan switches mecánicos diseñados para decenas de millones de clics. Se desgastan por degradación del contacto: el switch empieza a rebotar o a no registrar — síntomas clásicos de doble clic o clics perdidos aunque la carcasa parezca nueva.</p>
+  <ul>
+    <li><strong>Doble clic</strong> una pulsación que se registra como dos: la primera señal de un switch desgastado u oxidado.</li>
+    <li><strong>Clics perdidos</strong> una pulsación que nunca se registra, típica de switches mecánicos rotos o un resorte débil.</li>
+    <li><strong>Zonas calientes</strong> dobles clics solo en un borde del botón, señal de desgaste irregular del switch.</li>
+  </ul>
+  <h3>Cómo conseguir el resultado más preciso</h3>
+  <ol>
+    <li>Haz 10–20 clics por botón a un ritmo parecido a tu uso real.</li>
+    <li>Mantén el dedo en el mismo punto todo el rato; los bordes estresan otra parte del switch.</li>
+    <li>Repite la ronda con el ratón caliente; los switches gastados fallan más en caliente.</li>
+    <li>Prueba los mismos botones por cable y por inalámbrico para separar problemas de transporte y de switch.</li>
+  </ol>
+  <h3>Por qué tu resultado parece 'mal'</h3>
+  <p>Un doble clic suelto puede ser un evento aislado, sobre todo justo al conectar. Repite las rondas: un patrón que se reproduce varias veces es un fallo real; un caso único normalmente no lo es.</p>
+</section>
 <h2>Preguntas frecuentes</h2>
           <div class="faq" style="margin-top:8px;">
             <details class="faq-item" open>
@@ -228,6 +248,19 @@
               <summary>¿Esto envía mis datos del ratón a algún sitio?</summary>
               <p>No. Todo se ejecuta localmente con JavaScript; no se realiza ninguna petición de red.</p>
             </details>
+            <details class="faq-item">
+              <summary>¿Qué causa el doble clic en ratones gaming?</summary>
+              <p>Sobre todo switches mecánicos. El resorte del contacto pierde tensión o los contactos se oxidan; el switch rebota y reporta dos pulsaciones. También influyen el montaje del chasis y modelos con fallos conocidos al primer año.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Puede un switch perder clics aunque se sienta bien?</summary>
+              <p>Sí. Una avería incipiente alterna entre clics limpios y perdidos según temperatura, agarre y ritmo. Si se repite en varias rondas, toca reemplazar o subir el tiempo de debounce.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Un hub USB o un alargador pueden cambiar mi resultado?</summary>
+              <p>Los fallos de transmisión se ven como clics perdidos o dobles. Conecta directamente en un puerto trasero; los hubs, alargadores largos y el ahorro de energía USB agresivo hacen los clics menos fiables.</p>
+            </details>
+
           </div>
         </div>
       </div>

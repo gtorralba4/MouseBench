@@ -291,7 +291,7 @@
   document.getElementById('aimReset').addEventListener('click', resetRun);
   document.getElementById('copyAim').addEventListener('click', function () {
     var text = T('aim_copy1', 'Aim & Memory Challenge — score ') + S.score + T('aim_copy2', ', cleared ') + S.level + T('aim_copy3', ' rounds, best ') +
-      (S.best ? S.best.score : S.score) + T('aim_copy4', '. Beat it at MouseBench!');
+      (S.best ? S.best.score : S.score) + T('aim_copy4', '. Beat it at MousePress!');
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function () { alert(T('aim_copied', 'Result copied to clipboard.')); });
     } else {

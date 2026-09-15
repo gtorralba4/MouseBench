@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,follow">
+<title>Click Speed Test Embed - MousePress</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/embed.css">
+<script>try{var t=localStorage.getItem('mbt')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <div class="embed-shell">
+    <div class="embed-brand">
+      <a class="brand" href="https://mousebench.fyi/" target="_blank" rel="noopener"><span class="brand-mark"><svg class="brand-svg" viewBox="0 0 24 24" width="25.2" height="25.2" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="#fff"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="#fff"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="#059669"/><circle cx="8.3" cy="17" r="1.2" fill="#059669"/><circle cx="15.7" cy="17" r="1.2" fill="#059669"/></g></g></svg></span><span>MousePress</span></a>
+    </div>
+
+    <div class="pill-group" role="group" aria-label="Duration">
+      <button class="pill" data-dur="1" type="button">1s</button>
+      <button class="pill active" data-dur="5" type="button">5s</button>
+      <button class="pill" data-dur="10" type="button">10s</button>
+      <button class="pill" data-dur="30" type="button">30s</button>
+      <button class="pill" data-dur="60" type="button">60s</button>
+      <button class="pill" data-dur="spam" type="button">Spam</button>
+    </div>
+
+    <div class="click-zone" id="cpsZone" role="button" tabindex="0" aria-label="Click speed test area">
+      <div class="big" id="cpsZoneText">Start clicking!</div>
+      <div class="muted small" id="cpsHint">Press the left mouse button to click.</div>
+    </div>
+
+    <div style="height:8px;background:var(--surface-2);border-radius:999px;overflow:hidden;margin:16px 0 0;">
+      <div id="cpsBar" style="height:100%;width:100%;background:var(--accent);transition:width .1s linear;"></div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat"><span class="label">Clicks</span><span class="value" id="cpsClicks">0</span></div>
+      <div class="stat"><span class="label">CPS</span><span class="value" id="cpsLive">0.0</span></div>
+      <div class="stat"><span class="label">Time left</span><span class="value" id="cpsLeft">5.0</span></div>
+      <div class="stat"><span class="label">Best CPS</span><span class="value" id="cpsBest">—</span></div>
+    </div>
+
+    <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
+      <button class="btn" id="cpsAgain" type="button">Try again</button>
+      <button class="btn secondary" id="cpsReset" type="button">Reset</button>
+    </div>
+
+    <div class="result-panel" id="cpsResult" style="display:none;">
+      <div class="card verdict" style="box-shadow:var(--shadow-md);">
+        <div class="vbig" id="cpsResCps">0.0</div>
+        <div class="vsub">clicks per second</div>
+        <div class="chips" style="justify-content:center;margin:12px 0;">
+          <span class="chip" id="cpsResCount"></span>
+          <span class="chip" id="cpsResCpm"></span>
+          <span class="chip" id="cpsResRank"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="embed-foot">
+      <span>Free click speed test</span>
+      <a href="https://mousebench.fyi/click-speed-test/" target="_blank" rel="noopener">More mouse tests →</a>
+    </div>
+  </div>
+
+  <div class="embed-code" id="embedCode" hidden>
+    <p>Add this click speed test to any site — paste the snippet into your HTML:</p>
+    <textarea id="embedCodeText" readonly></textarea>
+    <button class="btn" id="embedCopy" type="button">Copy code</button>
+  </div>
+
+  <script src="js/common.js" defer></script>
+  <script src="js/click-speed-test.js"></script>
+  <script>
+  (function () {
+    'use strict';
+    var SNIPPET = '<iframe src="https://mousebench.fyi/embed.html" style="width:100%;border:0;overflow:hidden;background:transparent" loading="lazy" title="Free click speed test" scrolling="no"></iframe>\n<script>\nwindow.addEventListener(\'message\',function(e){if(e.data&&e.data.type===\'mousepress-resize\'){var f=document.querySelector(\'iframe[src="https://mousebench.fyi/embed.html"]\');if(f){f.style.height=e.data.height+\'px\';}}});\n<\/script>';
+    if (window.top === window.self) {
+      var box = document.getElementById('embedCode');
+      var area = document.getElementById('embedCodeText');
+      var btn = document.getElementById('embedCopy');
+      if (box && area && btn) {
+        box.hidden = false;
+        area.value = SNIPPET;
+        btn.addEventListener('click', function () {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(SNIPPET).then(function () {
+              var prev = btn.textContent;
+              btn.textContent = 'Copied \u2713';
+              setTimeout(function () { btn.textContent = prev; }, 1500);
+            });
+          } else {
+            area.focus();
+            area.select();
+          }
+        });
+      }
+    }
+    function postHeight() {
+      try { window.parent.postMessage({ type: 'mousepress-resize', height: document.documentElement.scrollHeight }, '*'); } catch (e) { /* ignore */ }
+    }
+    window.addEventListener('load', postHeight);
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(postHeight).observe(document.body);
+    } else {
+      window.addEventListener('resize', postHeight);
+      setInterval(postHeight, 1500);
+    }
+  })();
+  </script>
+</body>
+</html>

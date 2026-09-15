@@ -1,0 +1,33 @@
+html, body { margin: 0; padding: 0; background: transparent; }
+.embed-shell {
+  max-width: 640px; margin: 0 auto;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+  box-shadow: var(--shadow-md); padding: 14px;
+}
+.embed-brand { margin: 0 0 10px; }
+.embed-brand .brand { font-size: 1rem; }
+.embed-brand .brand-mark { width: 28px; height: 28px; border-radius: 8px; font-size: .95rem; }
+.embed-shell .pill-group { margin: 0 0 12px; }
+.embed-shell .click-zone { min-height: 96px; padding: 20px; }
+.embed-shell .stats-row { gap: 8px; }
+.embed-shell .stat { min-width: 80px; padding: 8px 10px; }
+.embed-shell .stat .value { font-size: 1.2rem; }
+.embed-foot {
+  margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  color: var(--muted); font-size: .8rem;
+}
+.embed-foot a { font-weight: 600; }
+.embed-code { max-width: 640px; margin: 18px auto 0; }
+.embed-code p { color: var(--muted); font-size: .9rem; }
+.embed-code textarea {
+  width: 100%; box-sizing: border-box; min-height: 120px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .78rem; border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px; background: var(--surface-2); color: var(--ink); resize: vertical;
+}
+.embed-code .btn { margin-top: 8px; }
+@media (max-width: 640px) {
+  .embed-shell { border-radius: 14px; padding: 12px; }
+  .embed-shell .click-zone { min-height: 88px; }
+}

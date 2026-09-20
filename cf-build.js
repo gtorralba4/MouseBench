@@ -4,7 +4,7 @@ const path = require('path');
 
 const root = __dirname;
 const out = path.join(root, 'public');
-const skip = new Set(['.git', 'node_modules', 'public', 'cf-build.js', 'package.json', 'package-lock.json', 'wrangler.jsonc']);
+const skip = new Set(['.git', 'node_modules', 'public', 'articles', 'cf-build.js', 'gen-lib.js', 'gen-articles.js', 'topics.js', 'update-footers.js', 'fix-de-es-slash.ps1', 'package.json', 'package-lock.json', 'wrangler.jsonc']);
 
 fs.rmSync(out, { recursive: true, force: true });
 fs.mkdirSync(out, { recursive: true });

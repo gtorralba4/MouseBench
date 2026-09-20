@@ -1,0 +1,36 @@
+'use strict';
+module.exports = {
+  title: 'About MousePress',
+  desc: 'About MousePress: browser-based mouse tests, DPI and latency tools, and honest guides about mouse hardware and reflexes.',
+  h1: 'About MousePress',
+  kicker: 'About',
+  intro: 'MousePress is a small, independent project of browser-based tools and guides for testing mouse hardware and training reflexes. Everything runs locally, nothing is tracked, and every claim is explained.',
+  faqTitle: 'Frequently asked questions',
+  relatedTitle: 'More',
+  content: [
+    { h2: 'What MousePress is',
+      p: 'A collection of mouse testers (buttons, DPI, scroll wheel, latency, click speed, reaction time, aim) plus step-by-step guides to interpret results and fix common hardware faults. It exists because most mouse tests online are slow, full of pop-ups or unclear about what they measure.' },
+    { h2: 'How the tests work',
+      p: 'Every measurement runs in your browser with standard web APIs: mouse buttons via MouseEvent, the scroll wheel via WheelEvent, and movement for the DPI tool via movementX and movementY. Results are computed locally in the current tab, so a slow connection never skews a result.',
+      ul: ['No downloads, no plug-ins.', 'No account, no sign-up, no saved profiles.', 'Nothing is sent to a server; you can verify in the network panel of your browser dev tools.'] },
+    { h2: 'The honesty policy',
+      p: 'Browsers cannot read hardware DPI or true end-to-end latency, so no honest site can promise those numbers directly. Where a test relies on an approximation, we say so clearly on the tool page and explain the error margin instead of hiding it.' },
+    { h2: 'Editorial principles',
+      p: 'The guides are written to be practical: what you can fix yourself, what needs a repair shop, and when a new device is the smarter buy. Recommendations favour durable hardware and honest measurement over hype about the latest specs.' },
+    { h2: 'Who runs it',
+      p: 'MousePress is maintained by a tiny independent team. We run the site to keep useful, clutter-free hardware testing available and fund it with non-intrusive advertising.' },
+  ],
+  faqs: [
+    { q: 'Are all the tools really free?',
+      a: 'Yes. Every tool is free, there is no premium tier, and nothing requires an account or download.' },
+    { q: 'Do the tests send my data anywhere?',
+      a: 'No. Events are processed locally with your browser APIs. Open the network panel while running a test and you will see no requests from the tools.' },
+    { q: 'Can I use MousePress on a website or embed the widget?',
+      a: 'Yes. The click speed test can be embedded on your own site with the widget we provide; look in the embed page source for the link.' },
+  ],
+  related: [
+    { href: 'contact.html', label: 'Contact' },
+    { href: 'privacy-policy.html', label: 'Privacy Policy' },
+    { href: 'terms-of-use.html', label: 'Terms of Use' },
+  ],
+};

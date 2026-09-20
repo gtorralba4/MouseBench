@@ -1,0 +1,36 @@
+'use strict';
+module.exports = {
+  title: 'Sobre MousePress',
+  desc: 'Sobre MousePress: pruebas de rat\u00f3n basadas en el navegador, herramientas de DPI y latencia, y gu\u00edas honestas sobre hardware de ratones y reflejos.',
+  h1: 'Sobre MousePress',
+  kicker: 'Acerca de',
+  intro: 'MousePress es un proyecto peque\u00f1o e independiente de herramientas y gu\u00edas basadas en el navegador para probar la hardware de tu rat\u00f3n y entrenar tus reflejos. Todo se ejecuta localmente, no se rastrea nada y cada afirmaci\u00f3n se explica.',
+  faqTitle: 'Preguntas frecuentes',
+  relatedTitle: 'M\u00e1s',
+  content: [
+    { h2: 'Qu\u00e9 es MousePress',
+      p: 'Una colecci\u00f3n de probadores de rat\u00f3n (botones, DPI, rueda de desplazamiento, latencia, velocidad de clic, tiempo de reacci\u00f3n, punter\u00eda) m\u00e1s gu\u00edas paso a paso para interpretar tus resultados y reparar aver\u00edas habituales. Existe porque la mayor\u00eda de los tests de rat\u00f3n online son lentos, est\u00e1n llenos de ventanas emergentes o no dejan claro qu\u00e9 miden.' },
+    { h2: 'C\u00f3mo funcionan las pruebas',
+      p: 'Cada medici\u00f3n se ejecuta en tu navegador con APIs web est\u00e1ndar: botones del rat\u00f3n mediante MouseEvent, la rueda con WheelEvent y el movimiento para la herramienta de DPI con movementX y movementY. Los resultados se calculan localmente en la pesta\u00f1a actual, de modo que una conexi\u00f3n lenta nunca falsea un resultado.',
+      ul: ['Sin descargas ni complementos.', 'Sin cuenta, sin registro y sin perfiles guardados.', 'Nada se env\u00eda a un servidor: puedes comprobarlo en el panel de red de las herramientas de desarrollador del navegador.'] },
+    { h2: 'La pol\u00edtica de honestidad',
+      p: 'Los navegadores no pueden leer el DPI real de la hardware ni la latencia exacta de extremo a extremo, as\u00ed que ning\u00fan sitio serio puede ofrecer esos n\u00fameros directamente. Cuando una prueba depende de una aproximaci\u00f3n, lo decimos claramente en la p\u00e1gina de la herramienta y explicamos el margen de error en lugar de ocultarlo.' },
+    { h2: 'Principios editoriales',
+      p: 'Las gu\u00edas est\u00e1n escritas para ser pr\u00e1cticas: lo que puedes arreglar t\u00fa mismo, lo que necesita un taller y cu\u00e1ndo comprar algo nuevo es la decisi\u00f3n m\u00e1s inteligente. Las recomendaciones favorecen hardware duradero y mediciones honestas frente al hype de las \u00faltimas especificaciones.' },
+    { h2: 'Qui\u00e9n lo gestiona',
+      p: 'MousePress lo mantiene un equipo independiente peque\u00f1o. Dirigimos el sitio para mantener disponibles pruebas de hardware \u00fatiles y sin distracciones, y lo financiamos con publicidad discreta.' },
+  ],
+  faqs: [
+    { q: '\u00bfDe verdad todas las herramientas son gratis?',
+      a: 'S\u00ed. Cada herramienta es gratuita, no hay plan premium y nada requiere cuenta ni descarga.' },
+    { q: '\u00bfLas pruebas env\u00edan mis datos a alg\u00fan sitio?',
+      a: 'No. Los eventos se procesan localmente con las APIs de tu navegador. Abre el panel de red al ejecutar una prueba y ver\u00e1s que las herramientas no hacen ninguna solicitud.' },
+    { q: '\u00bfPuedo incrustar el widget en mi propia web?',
+      a: 'S\u00ed. El test de velocidad de clic se puede integrar en tu propia web con el widget que ofrecemos; el enlace est\u00e1 en el c\u00f3digo fuente de la p\u00e1gina de embebido.' },
+  ],
+  related: [
+    { href: 'contact.html', label: 'Contacto' },
+    { href: 'privacy-policy.html', label: 'Pol\u00edtica de privacidad' },
+    { href: 'terms-of-use.html', label: 'T\u00e9rminos de uso' },
+  ],
+};

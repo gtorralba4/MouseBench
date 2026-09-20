@@ -1,0 +1,36 @@
+'use strict';
+module.exports = {
+  title: '\u00dcber MousePress',
+  desc: '\u00dcber MousePress: browserbasierte Maus-Tests, DPI- und Latenz-Tools sowie ehrliche Guides zu Maushardware und Reaktion.',
+  h1: '\u00dcber MousePress',
+  kicker: 'Info',
+  intro: 'MousePress ist ein kleines, unabh\u00e4ngiges Projekt mit browserbasierten Tools und Guides zum Testen von Maushardware und zum Training der Reaktionsf\u00e4higkeit. Alles l\u00e4uft lokal, nichts wird verfolgt, und jede Aussage wird erkl\u00e4rt.',
+  faqTitle: 'H\u00e4ufige Fragen',
+  relatedTitle: 'Mehr',
+  content: [
+    { h2: 'Was MousePress ist',
+      p: 'Eine Sammlung von Maus-Testern (Tasten, DPI, Mausrad, Latenz, Klickgeschwindigkeit, Reaktion, Zielen) plus Schritt-f\u00fcr-Schritt-Guides, die Ergebnisse verst\u00e4ndlich machen und h\u00e4ufige Hardware-Fehler beheben. Es gibt das Projekt, weil die meisten Maus-Tests online langsam, nervig oder unklar bez\u00fcglich dessen sind, was sie messen.' },
+    { h2: 'Wie die Tests funktionieren',
+      p: 'Jede Messung l\u00e4uft in Ihrem Browser \u00fcber standardm\u00e4\u00dfige Web-APIs: Maustasten \u00fcber MouseEvent, das Mausrad \u00fcber WheelEvent und die Bewegung f\u00fcr das DPI-Tool \u00fcber movementX und movementY. Ergebnisse entstehen lokal im aktuellen Tab, sodass eine langsame Verbindung kein Ergebnis verf\u00e4lscht.',
+      ul: ['Keine Downloads, keine Plug-ins.', 'Kein Konto, keine Anmeldung, keine gespeicherten Profile.', 'Nichts wird an einen Server gesendet; im Netzwerk-Panel der Browser-Entwicklertools kann das jeder pr\u00fcfen.'] },
+    { h2: 'Die Ehrlichkeits-Regel',
+      p: 'Browser k\u00f6nnen die Hardware-DPI oder die echte End-to-End-Latenz nicht auslesen, daher kann keine seri\u00f6se Seite diese Zahlen direkt versprechen. Wo ein Test auf einer N\u00e4herung beruht, wird das auf der Tool-Seite klar gesagt und die Fehlergrenze erkl\u00e4rt, statt sie zu verstecken.' },
+    { h2: 'Redaktionelle Grunds\u00e4tze',
+      p: 'Die Guides sind praktisch geschrieben: was Sie selbst reparieren k\u00f6nnen, was eine Fachwerkstatt braucht und wann ein neues Ger\u00e4t die kl\u00fcgere Wahl ist. Empfehlungen favorisieren langlebige Hardware und ehrliche Messungen statt Hype um die neuesten Spezifikationen.' },
+    { h2: 'Wer dahintersteckt',
+      p: 'MousePress wird von einem kleinen unabh\u00e4ngigen Team betrieben. Das Projekt h\u00e4lt n\u00fctzliche, werbefreie Hardware-Tests verf\u00fcgbar und wird durch dezent eingeblendete Werbung finanziert.' },
+  ],
+  faqs: [
+    { q: 'Sind alle Tools wirklich kostenlos?',
+      a: 'Ja. Jedes Tool ist kostenlos, es gibt keine Premium-Stufe und nichts ben\u00f6tigt ein Konto oder einen Download.' },
+    { q: 'Werden meine Daten irgendwohin gesendet?',
+      a: 'Nein. Ereignisse werden lokal mit Ihren Browser-APIs verarbeitet. \u00d6ffnen Sie w\u00e4hrend eines Tests das Netzwerk-Panel und Sie sehen keine Anfragen der Tools.' },
+    { q: 'Kann ich das Klick-Tool in meine Website einbinden?',
+      a: 'Ja. Der Klickgeschwindigkeits-Test l\u00e4sst sich mit dem bereitgestellten Widget in Ihrer eigenen Website einbetten \u2013 der Link steht im Quelltext der Embed-Seite.' },
+  ],
+  related: [
+    { href: 'contact.html', label: 'Kontakt' },
+    { href: 'privacy-policy.html', label: 'Datenschutzerkl\u00e4rung' },
+    { href: 'terms-of-use.html', label: 'Nutzungsbedingungen' },
+  ],
+};

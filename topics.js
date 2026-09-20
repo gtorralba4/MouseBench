@@ -1,0 +1,53 @@
+'use strict';
+module.exports = [
+  {
+    slug: 'fix-mouse-double-click',
+    datePublished: '2026-09-05',
+    dateModified: '2026-09-20',
+    en: require('./articles/fix-mouse-double-click.en.js'),
+    de: require('./articles/fix-mouse-double-click.de.js'),
+    es: require('./articles/fix-mouse-double-click.es.js'),
+  },
+  {
+    slug: 'mouse-polling-rate',
+    datePublished: '2026-09-06',
+    dateModified: '2026-09-20',
+    en: require('./articles/mouse-polling-rate.en.js'),
+    de: require('./articles/mouse-polling-rate.de.js'),
+    es: require('./articles/mouse-polling-rate.es.js'),
+  },
+  {
+    slug: 'what-is-a-good-cps',
+    datePublished: '2026-09-08',
+    dateModified: '2026-09-20',
+    en: require('./articles/what-is-a-good-cps.en.js'),
+    de: require('./articles/what-is-a-good-cps.de.js'),
+    es: require('./articles/what-is-a-good-cps.es.js'),
+  },
+  {
+    slug: 'improve-reaction-time',
+    datePublished: '2026-09-10',
+    dateModified: '2026-09-20',
+    en: require('./articles/improve-reaction-time.en.js'),
+    de: require('./articles/improve-reaction-time.de.js'),
+    es: require('./articles/improve-reaction-time.es.js'),
+  },
+  {
+    slug: 'about',
+    schemaType: 'AboutPage',
+    datePublished: '2026-09-20',
+    dateModified: '2026-09-20',
+    en: require('./articles/about.en.js'),
+    de: require('./articles/about.de.js'),
+    es: require('./articles/about.es.js'),
+  },
+  {
+    slug: 'contact',
+    schemaType: 'ContactPage',
+    datePublished: '2026-09-20',
+    dateModified: '2026-09-20',
+    en: require('./articles/contact.en.js'),
+    de: require('./articles/contact.de.js'),
+    es: require('./articles/contact.es.js'),
+  },
+];

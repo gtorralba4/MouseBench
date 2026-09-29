@@ -43,8 +43,8 @@ module.exports = {
       a: 'Partially. Faster clicking helps, but games also depend on prediction and game sense, so train reaction alongside map awareness rather than instead of it.' },
   ],
   related: [
-    { href: 'reaction-time-test.html', label: 'Reaction Time Test' },
-    { href: 'click-speed-test.html', label: 'Click Speed Test (CPS)' },
-    { href: 'what-is-a-good-cps.html', label: 'What Is a Good CPS?' },
+    { href: 'reaction-time-test', label: 'Reaction Time Test' },
+    { href: 'click-speed-test', label: 'Click Speed Test (CPS)' },
+    { href: 'what-is-a-good-cps', label: 'What Is a Good CPS?' },
   ],
 };

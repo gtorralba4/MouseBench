@@ -29,8 +29,8 @@ module.exports = {
       a: 'Yes. The click speed test can be embedded on your own site with the widget we provide; look in the embed page source for the link.' },
   ],
   related: [
-    { href: 'contact.html', label: 'Contact' },
-    { href: 'privacy-policy.html', label: 'Privacy Policy' },
-    { href: 'terms-of-use.html', label: 'Terms of Use' },
+    { href: 'contact', label: 'Contact' },
+    { href: 'privacy-policy', label: 'Privacy Policy' },
+    { href: 'terms-of-use', label: 'Terms of Use' },
   ],
 };

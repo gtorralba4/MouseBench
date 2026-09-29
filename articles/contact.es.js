@@ -28,8 +28,8 @@ module.exports = {
       a: 'S\u00ed. Hacer preguntas, informar de errores y proponer funciones no cuesta nada.' },
   ],
   related: [
-    { href: 'about.html', label: 'Sobre nosotros' },
-    { href: 'privacy-policy.html', label: 'Pol\u00edtica de privacidad' },
-    { href: 'terms-of-use.html', label: 'T\u00e9rminos de uso' },
+    { href: 'about', label: 'Sobre nosotros' },
+    { href: 'privacy-policy', label: 'Pol\u00edtica de privacidad' },
+    { href: 'terms-of-use', label: 'T\u00e9rminos de uso' },
   ],
 };

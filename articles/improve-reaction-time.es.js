@@ -42,8 +42,8 @@ module.exports = {
       a: 'En parte. Hacer clic m\u00e1s r\u00e1pido ayuda, pero los juegos tambi\u00e9n dependen de la predicci\u00f3n y del sentido t\u00e1ctico, as\u00ed que entr\u00e9nala junto al conocimiento del mapa y no en su lugar.' },
   ],
   related: [
-    { href: 'reaction-time-test.html', label: 'Test de tiempo de reacci\u00f3n' },
-    { href: 'click-speed-test.html', label: 'Test de velocidad de clic (CPS)' },
-    { href: 'what-is-a-good-cps.html', label: '\u00bfCu\u00e1l es un buen CPS?' },
+    { href: 'reaction-time-test', label: 'Test de tiempo de reacci\u00f3n' },
+    { href: 'click-speed-test', label: 'Test de velocidad de clic (CPS)' },
+    { href: 'what-is-a-good-cps', label: '\u00bfCu\u00e1l es un buen CPS?' },
   ],
 };

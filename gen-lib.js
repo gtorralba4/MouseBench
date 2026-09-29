@@ -25,8 +25,8 @@ function fixLangLinks(header, lang, slug) {
   if (slug === 'click-speed-test') return header;
   // Only rewrite lang-drop links (those carrying a hreflang attribute).
   // Nav/footer links to the CPS tool keep their original href.
-  const re = /(href="(?:\.\.\/)?(?:es\/|de\/)?)click-speed-test(\.html")( hreflang)/g;
-  return header.replace(re, '$1' + slug + '$2$3');
+  const re = /(href="\/)((?:de\/|es\/)?)click-speed-test(?:\.html)?"( hreflang)/g;
+  return header.replace(re, (m, p1, p2, p3) => p1 + p2 + slug + '"' + p3);
 }
 
 function head(lang, opts) {
@@ -56,7 +56,7 @@ function head(lang, opts) {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: lang === 'de' ? 'Startseite' : lang === 'es' ? 'Inicio' : 'Home', item: 'https://mousebench.fyi/' + (lang === 'en' ? '' : lang) },
+          { '@type': 'ListItem', position: 1, name: lang === 'de' ? 'Startseite' : lang === 'es' ? 'Inicio' : 'Home', item: 'https://mousebench.fyi/' + (lang === 'en' ? '' : lang + '/') },
           { '@type': 'ListItem', position: 2, name: opts.h1, item: absUrl },
         ],
       },

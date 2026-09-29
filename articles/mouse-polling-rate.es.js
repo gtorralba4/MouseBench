@@ -34,8 +34,8 @@ module.exports = {
       a: 'En una pantalla de 60 Hz, normalmente no. En pantallas de alta frecuencia, una tasa de 125 Hz produce una irregularidad visible, por eso los gamers ponen 1000 Hz.' },
   ],
   related: [
-    { href: 'click-speed-test.html', label: 'Test de velocidad de clic (CPS)' },
-    { href: 'mouse-latency-test.html', label: 'Test de latencia del rat\u00f3n' },
-    { href: 'dpi-test.html', label: 'Test de DPI' },
+    { href: 'click-speed-test', label: 'Test de velocidad de clic (CPS)' },
+    { href: 'mouse-latency-test', label: 'Test de latencia del rat\u00f3n' },
+    { href: 'dpi-test', label: 'Test de DPI' },
   ],
 };

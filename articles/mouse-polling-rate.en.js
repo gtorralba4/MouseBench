@@ -35,8 +35,8 @@ module.exports = {
       a: 'On a 60 Hz screen, mostly not. On high-refresh screens, a 125 Hz rate produces noticeable unevenness, which is why gamers set 1000 Hz.' },
   ],
   related: [
-    { href: 'click-speed-test.html', label: 'Click Speed Test (CPS)' },
-    { href: 'mouse-latency-test.html', label: 'Mouse Latency Test' },
-    { href: 'dpi-test.html', label: 'DPI Test' },
+    { href: 'click-speed-test', label: 'Click Speed Test (CPS)' },
+    { href: 'mouse-latency-test', label: 'Mouse Latency Test' },
+    { href: 'dpi-test', label: 'DPI Test' },
   ],
 };

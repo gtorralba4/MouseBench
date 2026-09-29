@@ -42,8 +42,8 @@ module.exports = {
       a: 'Teilweise. Schnelleres Klicken hilft, aber Spiele h\u00e4ngen auch von Vorhersage und Spielverst\u00e4ndnis ab. Trainieren Sie Reaktion also neben Kartenwissen statt stattdessen.' },
   ],
   related: [
-    { href: 'reaction-time-test.html', label: 'Reaktionstest' },
-    { href: 'click-speed-test.html', label: 'Klickgeschwindigkeits-Test (CPS)' },
-    { href: 'what-is-a-good-cps.html', label: 'Was ist ein guter CPS-Wert?' },
+    { href: 'reaction-time-test', label: 'Reaktionstest' },
+    { href: 'click-speed-test', label: 'Klickgeschwindigkeits-Test (CPS)' },
+    { href: 'what-is-a-good-cps', label: 'Was ist ein guter CPS-Wert?' },
   ],
 };

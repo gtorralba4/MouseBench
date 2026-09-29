@@ -34,8 +34,8 @@ module.exports = {
       a: 'Auf einem 60-Hz-Bildschirm meist nicht. Auf Bildschirmen mit hoher Bildwiederholrate erzeugt 125 Hz sichtbares Ungleichm\u00e4\u00dfiges, weshalb Gamer 1000 Hz w\u00e4hlen.' },
   ],
   related: [
-    { href: 'click-speed-test.html', label: 'Klickgeschwindigkeits-Test (CPS)' },
-    { href: 'mouse-latency-test.html', label: 'Maus-Latenz-Test' },
-    { href: 'dpi-test.html', label: 'DPI-Test' },
+    { href: 'click-speed-test', label: 'Klickgeschwindigkeits-Test (CPS)' },
+    { href: 'mouse-latency-test', label: 'Maus-Latenz-Test' },
+    { href: 'dpi-test', label: 'DPI-Test' },
   ],
 };

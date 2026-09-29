@@ -29,8 +29,8 @@ module.exports = {
       a: 'S\u00ed. El test de velocidad de clic se puede integrar en tu propia web con el widget que ofrecemos; el enlace est\u00e1 en el c\u00f3digo fuente de la p\u00e1gina de embebido.' },
   ],
   related: [
-    { href: 'contact.html', label: 'Contacto' },
-    { href: 'privacy-policy.html', label: 'Pol\u00edtica de privacidad' },
-    { href: 'terms-of-use.html', label: 'T\u00e9rminos de uso' },
+    { href: 'contact', label: 'Contacto' },
+    { href: 'privacy-policy', label: 'Pol\u00edtica de privacidad' },
+    { href: 'terms-of-use', label: 'T\u00e9rminos de uso' },
   ],
 };

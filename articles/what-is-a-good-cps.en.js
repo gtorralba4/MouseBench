@@ -43,8 +43,8 @@ module.exports = {
       a: 'Not magically. Lightweight buttons and low debounce let trained fingers go slightly faster, but your skill determines most of the score.' },
   ],
   related: [
-    { href: 'click-speed-test.html', label: 'Click Speed Test (CPS)' },
-    { href: 'improve-reaction-time.html', label: 'How to Improve Reaction Time' },
-    { href: 'mouse-polling-rate.html', label: 'What Is a Mouse Polling Rate?' },
+    { href: 'click-speed-test', label: 'Click Speed Test (CPS)' },
+    { href: 'improve-reaction-time', label: 'How to Improve Reaction Time' },
+    { href: 'mouse-polling-rate', label: 'What Is a Mouse Polling Rate?' },
   ],
 };

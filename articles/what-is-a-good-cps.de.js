@@ -42,8 +42,8 @@ module.exports = {
       a: 'Nicht von allein. Leichte Tasten und niedriger Debounce lassen trainierte Finger etwas schneller klicken, aber das K\u00f6nnen bestimmt den gr\u00f6\u00dften Teil des Ergebnisses.' },
   ],
   related: [
-    { href: 'click-speed-test.html', label: 'Klickgeschwindigkeits-Test (CPS)' },
-    { href: 'improve-reaction-time.html', label: 'Reaktionszeit verbessern' },
-    { href: 'mouse-polling-rate.html', label: 'Pollingrate der Maus' },
+    { href: 'click-speed-test', label: 'Klickgeschwindigkeits-Test (CPS)' },
+    { href: 'improve-reaction-time', label: 'Reaktionszeit verbessern' },
+    { href: 'mouse-polling-rate', label: 'Pollingrate der Maus' },
   ],
 };

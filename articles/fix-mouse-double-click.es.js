@@ -38,8 +38,8 @@ module.exports = {
       a: 'En la mayor\u00eda de ratones con cable e inal\u00e1mbricos s\u00ed, pero abrirlo suele anular la garant\u00eda. L\u00edmpialo solo cuando ya no est\u00e9 en garant\u00eda o sepas bien lo que haces.' },
   ],
   related: [
-    { href: 'click-speed-test.html', label: 'Test de velocidad de clic (CPS)' },
-    { href: 'mouse-button-test.html', label: 'Test de botones del rat\u00f3n' },
-    { href: 'improve-reaction-time.html', label: 'Mejorar el tiempo de reacci\u00f3n' },
+    { href: 'click-speed-test', label: 'Test de velocidad de clic (CPS)' },
+    { href: 'mouse-button-test', label: 'Test de botones del rat\u00f3n' },
+    { href: 'improve-reaction-time', label: 'Mejorar el tiempo de reacci\u00f3n' },
   ],
 };

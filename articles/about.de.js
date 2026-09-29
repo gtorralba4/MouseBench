@@ -29,8 +29,8 @@ module.exports = {
       a: 'Ja. Der Klickgeschwindigkeits-Test l\u00e4sst sich mit dem bereitgestellten Widget in Ihrer eigenen Website einbetten \u2013 der Link steht im Quelltext der Embed-Seite.' },
   ],
   related: [
-    { href: 'contact.html', label: 'Kontakt' },
-    { href: 'privacy-policy.html', label: 'Datenschutzerkl\u00e4rung' },
-    { href: 'terms-of-use.html', label: 'Nutzungsbedingungen' },
+    { href: 'contact', label: 'Kontakt' },
+    { href: 'privacy-policy', label: 'Datenschutzerkl\u00e4rung' },
+    { href: 'terms-of-use', label: 'Nutzungsbedingungen' },
   ],
 };

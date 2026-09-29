@@ -28,8 +28,8 @@ module.exports = {
       a: 'Yes. Asking questions, reporting bugs and requesting features costs nothing.' },
   ],
   related: [
-    { href: 'about.html', label: 'About' },
-    { href: 'privacy-policy.html', label: 'Privacy Policy' },
-    { href: 'terms-of-use.html', label: 'Terms of Use' },
+    { href: 'about', label: 'About' },
+    { href: 'privacy-policy', label: 'Privacy Policy' },
+    { href: 'terms-of-use', label: 'Terms of Use' },
   ],
 };

@@ -38,8 +38,8 @@ module.exports = {
       a: 'For most wired and wireless mice, yes, but opening it usually voids the warranty. Clean it only when it is out of warranty or you are sure about what you are doing.' },
   ],
   related: [
-    { href: 'click-speed-test.html', label: 'Click Speed Test (CPS)' },
-    { href: 'mouse-button-test.html', label: 'Mouse Button Test' },
-    { href: 'improve-reaction-time.html', label: 'How to Improve Reaction Time' },
+    { href: 'click-speed-test', label: 'Click Speed Test (CPS)' },
+    { href: 'mouse-button-test', label: 'Mouse Button Test' },
+    { href: 'improve-reaction-time', label: 'How to Improve Reaction Time' },
   ],
 };

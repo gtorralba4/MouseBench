@@ -28,8 +28,8 @@ module.exports = {
       a: 'Nein. Fragen stellen, Fehler melden und W\u00fcnsche \u00e4u\u00dfern ist kostenlos.' },
   ],
   related: [
-    { href: 'about.html', label: '\u00dcber uns' },
-    { href: 'privacy-policy.html', label: 'Datenschutzerkl\u00e4rung' },
-    { href: 'terms-of-use.html', label: 'Nutzungsbedingungen' },
+    { href: 'about', label: '\u00dcber uns' },
+    { href: 'privacy-policy', label: 'Datenschutzerkl\u00e4rung' },
+    { href: 'terms-of-use', label: 'Nutzungsbedingungen' },
   ],
 };

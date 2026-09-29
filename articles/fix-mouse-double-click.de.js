@@ -38,8 +38,8 @@ module.exports = {
       a: 'Bei den meisten kabelgebundenen und kabellosen M\u00e4usen ja, aber das \u00d6ffnen macht die Garantie normalerweise ung\u00fcltig. \u00d6ffnen Sie sie nur, wenn sie nicht mehr in der Garantie ist.' },
   ],
   related: [
-    { href: 'click-speed-test.html', label: 'Klickgeschwindigkeits-Test (CPS)' },
-    { href: 'mouse-button-test.html', label: 'Maustasten-Test' },
-    { href: 'improve-reaction-time.html', label: 'Reaktionszeit verbessern' },
+    { href: 'click-speed-test', label: 'Klickgeschwindigkeits-Test (CPS)' },
+    { href: 'mouse-button-test', label: 'Maustasten-Test' },
+    { href: 'improve-reaction-time', label: 'Reaktionszeit verbessern' },
   ],
 };

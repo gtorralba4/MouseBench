@@ -42,8 +42,8 @@ module.exports = {
       a: 'No por arte de magia. Los botones ligeros y el debounce bajo dejan que los dedos entrenados vayan algo m\u00e1s r\u00e1pido, pero tu habilidad decide casi toda la puntuaci\u00f3n.' },
   ],
   related: [
-    { href: 'click-speed-test.html', label: 'Test de velocidad de clic (CPS)' },
-    { href: 'improve-reaction-time.html', label: 'Mejorar el tiempo de reacci\u00f3n' },
-    { href: 'mouse-polling-rate.html', label: 'Tasa de sondeo del rat\u00f3n' },
+    { href: 'click-speed-test', label: 'Test de velocidad de clic (CPS)' },
+    { href: 'improve-reaction-time', label: 'Mejorar el tiempo de reacci\u00f3n' },
+    { href: 'mouse-polling-rate', label: 'Tasa de sondeo del rat\u00f3n' },
   ],
 };

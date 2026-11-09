@@ -68,6 +68,8 @@ function head(lang, opts) {
     + '<script>(function(){function signalGooglefcPresent(){if(!window.frames[\'googlefcPresent\']){if(document.body){const iframe=document.createElement(\'iframe\');iframe.style=\'width:0;height:0;border:none;z-index:-1000;left:-1000px;top:-1000px;display:none;background-color:white;\';iframe.name=\'googlefcPresent\';document.body.appendChild(iframe);}else{setTimeout(signalGooglefcPresent,0);}}}signalGooglefcPresent();})();</script>\n'
     + '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2675015568638839"\n     crossorigin="anonymous"></script>\n'
     + '<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+    + '<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P2M6M44K"></script>\n'
+    + '<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag(\'js\', new Date());</script>\n'
     + '<title>' + opts.title + '</title>\n'
     + '<meta name="description" content="' + opts.desc + '">\n'
     + '<meta property="og:site_name" content="MousePress">\n'

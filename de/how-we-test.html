@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<script async src="https://fundingchoicesmessages.google.com/i/pub-2675015568638839?ers=1"></script>
+<script>(function(){function signalGooglefcPresent(){if(!window.frames['googlefcPresent']){if(document.body){const iframe=document.createElement('iframe');iframe.style='width:0;height:0;border:none;z-index:-1000;left:-1000px;top:-1000px;display:none;background-color:white;';iframe.name='googlefcPresent';document.body.appendChild(iframe);}else{setTimeout(signalGooglefcPresent,0);}}}signalGooglefcPresent();})();</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2675015568638839"
+     crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>So testen wir · Methodik und Genauigkeitsgrenzen | MousePress</title>
+<meta name="description" content="Was jeder MousePress-Test wirklich misst, was ein Browser physikalisch nicht messen kann, die Fehlerspanne jedes Ergebnisses und wie du eine Messung reproduzierst.">
+<meta property="og:site_name" content="MousePress">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mousebench.fyi/de/how-we-test">
+<meta property="og:title" content="So testen wir">
+<meta property="og:description" content="Was jeder MousePress-Test wirklich misst, was ein Browser physikalisch nicht messen kann, die Fehlerspanne jedes Ergebnisses und wie du eine Messung reproduzierst.">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://mousebench.fyi/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="So testen wir">
+<meta name="twitter:description" content="Was jeder MousePress-Test wirklich misst, was ein Browser physikalisch nicht messen kann, die Fehlerspanne jedes Ergebnisses und wie du eine Messung reproduzierst.">
+<meta name="twitter:image" content="https://mousebench.fyi/og-image.png">
+<link rel="canonical" href="https://mousebench.fyi/de/how-we-test">
+<link rel="alternate" hreflang="de" href="https://mousebench.fyi/de/how-we-test">
+<link rel="alternate" hreflang="en" href="https://mousebench.fyi/how-we-test">
+<link rel="alternate" hreflang="es" href="https://mousebench.fyi/es/how-we-test">
+<link rel="alternate" hreflang="x-default" href="https://mousebench.fyi/how-we-test">
+<link rel="stylesheet" href="../css/style.css">
+<script>try{var t=localStorage.getItem('mbt')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"So testen wir · Methodik und Genauigkeitsgrenzen | MousePress","headline":"So testen wir","description":"Was jeder MousePress-Test wirklich misst, was ein Browser physikalisch nicht messen kann, die Fehlerspanne jedes Ergebnisses und wie du eine Messung reproduzierst.","url":"https://mousebench.fyi/de/how-we-test","inLanguage":"de","datePublished":"2026-11-25","dateModified":"2026-11-25","author":{"@type":"Organization","name":"MousePress","url":"https://mousebench.fyi/"},"publisher":{"@type":"Organization","name":"MousePress","url":"https://mousebench.fyi/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://mousebench.fyi/de/"},{"@type":"ListItem","position":2,"name":"So testen wir","item":"https://mousebench.fyi/de/how-we-test"}]}]}</script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="/de/"><span class="brand-mark"><svg class="brand-svg" viewBox="0 0 24 24" width="25.2" height="25.2" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="#fff" opacity=".92"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="#fff"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="#fff"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="#059669"/><circle cx="8.3" cy="17" r="1.2" fill="#059669"/><circle cx="15.7" cy="17" r="1.2" fill="#059669"/></g></g></svg></span><span>MousePress</span></a>
+    <div class="lang-drop">
+      <button class="nav-toggle lang-toggle" id="langToggle" type="button" aria-haspopup="true" aria-expanded="false">Sprache <span aria-hidden="true">⌄</span></button>
+      <div class="nav-panel lang-panel" id="langPanel">
+        <a class="nav-link" href="/de/about" hreflang="de"><span class="ico"><svg viewBox="0 0 24 24" class="flag" width="1em" height="1em" aria-hidden="true"><rect width="24" height="24" rx="3.5" fill="#ffce00"/><rect y="16" width="24" height="8" fill="#dd0000"/><rect width="24" height="8" rx="3.5" fill="#1f1f1f"/></svg></span>Deutsch</a>
+        <a class="nav-link" href="/es/about" hreflang="es"><span class="ico"><svg viewBox="0 0 24 24" class="flag" width="1em" height="1em" aria-hidden="true"><rect width="24" height="24" rx="3.5" fill="#aa151b"/><rect y="8" width="24" height="8" fill="#f1bf00"/></svg></span>Español</a>
+        <a class="nav-link" href="/about" hreflang="en"><span class="ico"><svg viewBox="0 0 24 24" class="flag" width="1em" height="1em" aria-hidden="true"><rect width="24" height="24" rx="3.5" fill="#012169"/><path d="M0 0l24 24M24 0 0 24" stroke="#fff" stroke-width="4.2"/><path d="M0 0l12 12 12-12" fill="#C8102E"/><path d="M0 24l12-12 12 12" fill="#C8102E"/><path d="M12 0v24M0 12h24" stroke="#fff" stroke-width="5"/><path d="M12 0v24M0 12h24" stroke="#C8102E" stroke-width="2.8"/></svg></span>English</a>
+      </div>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Zwischen hellem und dunklem Thema wechseln">
+      <svg class="theme-icon" viewBox="0 0 24 24" width="26.62" height="26.62" aria-hidden="true"><g transform="translate(12 12) scale(1.2075) translate(-12 -16.5)"><g transform="translate(12 16.3) scale(1 1.1) translate(-12 -16.3)"><rect x="3.4" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="17" y="9.4" width="3.6" height="5.2" rx="1.6" fill="var(--icon-mouse)" opacity=".9"/><rect x="5.8" y="10.4" width="12.4" height="2" rx="1" fill="var(--icon-mouse)"/><rect x="5" y="13.6" width="14" height="9" rx="4.5" fill="var(--icon-mouse)"/><path d="M12 22.4c1 .4 2.2.4 2.9-.2" stroke="var(--icon-mouse)" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="11.2" y="14.9" width="1.6" height="5.8" rx="0.8" fill="var(--icon-accent)"/><circle cx="8.3" cy="17" r="1.2" fill="var(--icon-accent)"/><circle cx="15.7" cy="17" r="1.2" fill="var(--icon-accent)"/></g></g></svg>
+    </button>
+    <div class="menu-drop">
+      <button class="nav-toggle" id="navToggle" type="button" aria-haspopup="true" aria-expanded="false">Menü <span aria-hidden="true">⌄</span></button>
+      <nav class="nav-panel menu-panel" id="navPanel" aria-label="Alle Tools">
+      <div class="nav-group">Empfohlen</div>
+      <a class="nav-link" href="/de/aim-trainer"><span class="ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="var(--icon-accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r="1.1" fill="var(--icon-accent)" stroke="none"/></svg></span>Ziel- &amp; Gedächtnis-Challenge</a>
+      <a class="nav-link" href="/de/"><span class="ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="var(--icon-accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10.5 12 3.5l8.5 7"/><path d="M5.5 9v11h13V9"/><path d="M10 20v-5h4v5"/></svg></span>Startseite</a>
+      <div class="nav-group">Maus-Tests</div>
+      <a class="nav-link" href="/de/mouse-button-test"><span class="ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="var(--icon-accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.2" y="2.6" width="13.6" height="18.8" rx="6.8"/><path d="M12 2.6v6.4"/></svg></span>Maustasten-Test</a>
+      <a class="nav-link" href="/de/dpi-test"><span class="ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="var(--icon-accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="8.2" width="20" height="7.6" rx="1.8"/><path d="M5 11.8v-1.8M8 11.8v1.8M11 11.8v-1.8M14 11.8v1.8M17 11.8v-1.8M20 11.8v1.8"/></svg></span>DPI-Test</a>
+      <a class="nav-link" href="/de/scroll-wheel-test"><span class="ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="var(--icon-accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><path d="M9 10.2 12 7.4l3 2.8M9 13.8l3 2.8 3-2.8"/></svg></span>Mausrad-Test</a>
+      <a class="nav-link" href="/de/mouse-latency-test"><span class="ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="var(--icon-accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2.5 5 13.5h5l-1.5 8L17.5 10.5h-5L13 2.5Z"/></svg></span>Maus-Latenz-Test</a>
+      <div class="nav-group">Geschwindigkeit &amp; Reflexe</div>
+      <a class="nav-link" href="/de/click-speed-test"><span class="ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="var(--icon-accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.6 4.7 4.9-.9-2.1 4.6 4.1 2.8-4.8.8 1 4.9-4.7-2.9L7.4 22l1-5.1-4.5-.7 3.9-3-2.5-4.8 5 .9L12 3Z"/></svg></span>Klickgeschwindigkeits-Test (CPS)</a>
+      <a class="nav-link" href="/de/reaction-time-test"><span class="ico"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="var(--icon-accent)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="6.6"/><path d="M10.8 1.8h2.4M12 4.2v2.2M12 13V9.2"/><path d="M18.8 8.2l-1.6 1.6M5.2 8.2l1.6 1.6"/></svg></span>Reaktionszeit-Test</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+  <main class="site-main">
+
+<div class="page-zone">
+  <div class="container">
+    <div class="hero">
+      <span class="kicker">Methodik</span>
+      <h1>So testen wir</h1>
+      <p>Jede Zahl auf dieser Seite kommt aus deinem Browser, und jede Zahl hat eine Grenze. Diese Seite dokumentiert, was die einzelnen Tests tatsächlich messen, was sie physikalisch nicht messen können und wie du ein Ergebnis reproduzierst, dem du trauen kannst.</p>
+    </div>
+
+    <div class="ad-slot leaderboard">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2675015568638839"
+       data-ad-slot="6168873351"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+    <div class="grid-main has-sidebar">
+      <div>
+        <div class="card prose">
+<h2>Was der Browser messen kann</h2>
+<p>Eine Webseite spricht nie direkt mit deiner Maus. Sie bekommt Ereignisse, die das Betriebssystem bereits verarbeitet hat. Vier Dinge stehen zur Verfügung, und alle unsere Tools bauen ausschließlich darauf auf:</p>
+<ul>
+  <li><strong>Welche Taste sich geändert hat.</strong> <code>MouseEvent.button</code> benennt die Taste, <code>MouseEvent.buttons</code> ist eine Bitmaske aller gedrückten Tasten (1 = links, 2 = rechts, 4 = Mitte, 8 = zurück, 16 = vor).</li>
+  <li><strong>Radbewegung.</strong> <code>WheelEvent.deltaY</code> plus <code>deltaMode</code>, das angibt, ob der Wert in Pixeln, Zeilen oder Seiten gezählt wird.</li>
+  <li><strong>Zeigerbewegung.</strong> <code>movementX</code> und <code>movementY</code>, in CSS-Pixeln und bereits vom Betriebssystem umgerechnet.</li>
+  <li><strong>Zeitstempel.</strong> <code>performance.now()</code>, theoretisch unter einer Millisekunde, praktisch an Animationsframes gekoppelt.</li>
+</ul>
+
+<h2>Was der Browser nicht messen kann</h2>
+<p>Diesen Teil lassen die meisten Testseiten weg. Nichts davon wird einer Webseite von irgendeinem Browser zugänglich gemacht:</p>
+<ul>
+  <li><strong>Hardware-DPI oder CPI.</strong> Die Zählschritte pro Zoll bleiben im Sensor. Es gibt keine Schnittstelle dafür.</li>
+  <li><strong>Polling-Rate.</strong> Das USB-Intervall ist unsichtbar. Es lässt sich nur indirekt über verlorene Klicks erahnen.</li>
+  <li><strong>Entprellzeit (Debounce).</strong> Ob ein 3-ms-Klick mit dem vorigen verschmilzt, entscheidet die Maus-Firmware.</li>
+  <li><strong>Echte Ende-zu-Ende-Latenz.</strong> Taste → USB → OS → Anwendung → Compositor → Panel sind mehrere Strecken, und nur die letzte ist teilweise sichtbar.</li>
+</ul>
+<p>Die praktische Folge: <strong>Keine Webseite kann deine DPI oder deine echte Latenz auslesen.</strong> Jede Seite, die das behauptet, rechnet dieselbe Zeiger-Arithmetik wie wir und schreibt nur ein selbstsichereres Etikett darauf. Wo unsere Tools auf einer Näherung beruhen, ist die Zahl als Schätzung gekennzeichnet und die Fehlerspanne wird genannt.</p>
+
+<h2>Was jeder Test aufzeichnet</h2>
+<table>
+  <thead><tr><th>Test</th><th>Was er aufzeichnet</th><th>Genauigkeit</th><th>Voraussetzung</th></tr></thead>
+  <tbody>
+    <tr><td>Maustasten</td><td><code>buttons</code>-Bitmaske pro Ereignis</td><td>Exakt</td><td>Keine</td></tr>
+    <tr><td>Mausrad</td><td><code>deltaY</code> pro Raste</td><td>Zählung exakt, Deltas geglättet</td><td>Trägheitsscrollen aus</td></tr>
+    <tr><td>DPI</td><td>Summe von <code>|movementX|</code> ÷ gezogene Zoll</td><td><strong>Schätzung, ±10 %</strong></td><td>100 % Skalierung, Standard-Zeigergeschwindigkeit, Beschleunigung aus</td></tr>
+    <tr><td>Latenz</td><td>Frame-synchroner Reiz → Klick</td><td>±1 Frame</td><td>Bildwiederholrate bekannt</td></tr>
+    <tr><td>Klickgeschwindigkeit (CPS)</td><td>Klicks ÷ verstrichene Zeit</td><td>Exakt, hardwarebegrenzt</td><td>Gleiche Dauer bei jedem Lauf</td></tr>
+    <tr><td>Reaktionszeit</td><td>Zeitstempel des Bildaufbaus → Klick</td><td>±1 Frame</td><td>Nicht vorwegnehmen</td></tr>
+  </tbody>
+</table>
+
+<h2>Warum die DPI-Zahl eine Schätzung ist</h2>
+<p>Das Tool summiert <code>movementX</code>, während du eine bekannte physische Strecke ziehst, und teilt dann. Das klingt exakt, doch der Wert in <code>movementX</code> ist die Bewegung des <em>Zeigers</em>, nicht des Sensors. Bevor er die Seite erreicht, hat das Betriebssystem bereits angewendet:</p>
+<ul>
+  <li><strong>Zeigergeschwindigkeit.</strong> Der Regler in Windows ist ein Multiplikator; nur die mittlere Stufe (6 von 11) ist 1:1.</li>
+  <li><strong>Zeigerbeschleunigung.</strong> „Zeigerbeschleunigung verbessern" lässt schnelle Bewegungen weiter laufen als langsame bei gleicher Strecke.</li>
+  <li><strong>Bildschirmskalierung.</strong> Bei 125 % oder 150 % erzeugt derselbe Zentimeter weniger CSS-Pixel, die Schätzung sinkt also proportional.</li>
+</ul>
+<p>Das Ergebnis ist damit deine <strong>effektive DPI unter den aktuellen Einstellungen</strong>. Bei 100 % Skalierung, Standard-Zeigergeschwindigkeit und ausgeschalteter Beschleunigung liegt sie nahe am Herstellerwert. Bei 150 % Skalierung liest sie etwa ein Drittel zu niedrig. Nutzlos ist sie deshalb nicht: Solange du Mäuse am selben Rechner mit denselben Einstellungen vergleichst, ist die Rangfolge verlässlich, und dieselbe Maus bei zwei Empfindlichkeiten zeigt das echte Verhältnis.</p>
+
+<h2>So reproduzierst du eine Messung</h2>
+<ol>
+  <li>Nimm eine echte Maus, kein Touchpad, und bleib auf derselben Unterlage.</li>
+  <li>Miss mindestens drei Läufe und vergleiche den Median, nicht den Bestwert.</li>
+  <li>Halte die Dauer gleich, wenn du CPS oder Reaktionszeiten vergleichst.</li>
+  <li>Ziehe beim DPI-Test 3–5 Zoll (7,5–12,5 cm) gerade — kurze Strecken verstärken den Fehler.</li>
+  <li>Schalte die Zeigerbeschleunigung vor einem DPI-Lauf aus und notiere deine Skalierung.</li>
+  <li>Ändere immer nur eine Variable: eine Maus, eine Einstellung, eine Dauer.</li>
+</ol>
+
+<h2>Warum ein Ergebnis falsch wirken kann</h2>
+<p>Wenn schnelle Klickfolgen als weniger Klicks ankommen, ist meist das Entprellen schuld, nicht deine Finger. Ein plötzlicher CPS-Abfall bei gleicher Hardware ist oft eine schwache Batterie in einer Funkmaus, die in einen Sparmodus mit niedrigerer Melderate wechselt. Reaktionszeiten, die zwischen Läufen um 30–40 ms springen, bedeuten meist, dass du den Reiz vorweggenommen hast, statt ihn zu sehen. Jede Tool-Seite erklärt die typischen Fehlerbilder der jeweiligen Messung.</p>
+
+<h2>Was wir aktualisieren, und wann</h2>
+<p>Browser ändern die Art, wie Ereignisse geliefert werden — zusammengefasste Pointer-Events und begrenzte Zeitstempel sind die zwei häufigsten Ursachen für Abweichungen. Wenn das Verhalten eines Tests von einer Browser-Änderung abhängt, prüfen wir ihn neu und aktualisieren den Text. Jede Anleitung zeigt das Datum der letzten Prüfung, und das Datum ändert sich nur, wenn sich der Inhalt wirklich ändert.</p>
+
+<h2>Korrekturen</h2>
+<p>Wenn eine Zahl hier falsch ist oder sich ein Test auf deiner Hardware anders verhält, schreib an <a href="/de/contact">unsere Kontaktadresse</a>. Wenn du es reproduzieren kannst, korrigieren wir das Tool und vermerken die Korrektur. Zu hören, dass wir bei einer Messung falsch liegen, ist nützlich; es höflich zu sagen ist optional.</p>
+
+<h2>Finanzierung und Unabhängigkeit</h2>
+<p>Die Seite finanziert sich über Display-Werbung. Es gibt keine bezahlten Rankings, keine gekauften Platzierungen und keine Affiliate-Links, die eine Empfehlung beeinflussen könnten. Jeder Test ist kostenlos, braucht kein Konto und läuft vollständig in deinem Browser — nichts Gemessenes wird an einen Server geschickt.</p>
+        </div>
+        <div class="ad-slot rectangle">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2675015568638839"
+       data-ad-slot="6168873351"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+      </div>
+      <aside class="aside-sticky">
+        <div class="ad-slot sidebar">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-2675015568638839"
+       data-ad-slot="6168873351"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+        <div class="card">
+          <h3>Verwandt</h3>
+          <div class="related" style="flex-direction:column;">
+            <a href="/de/dpi-test">DPI-Test</a>
+            <a href="/de/mouse-latency-test">Maus-Latenz-Test</a>
+            <a href="/de/click-speed-test">Klickgeschwindigkeits-Test</a>
+            <a href="/de/reaction-time-test">Reaktionszeit-Test</a>
+            <a href="/de/about">Über MousePress</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+</main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Maus-Tests</h3>
+        <ul>
+          <li><a href="/de/mouse-button-test">Maustasten-Test</a></li>
+          <li><a href="/de/dpi-test">DPI-Test</a></li>
+          <li><a href="/de/scroll-wheel-test">Mausrad-Test</a></li>
+          <li><a href="/de/mouse-latency-test">Maus-Latenz-Test</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Geschwindigkeit &amp; Reflexe</h3>
+        <ul>
+          <li><a href="/de/click-speed-test">Klickgeschwindigkeits-Test (CPS)</a></li>
+          <li><a href="/de/reaction-time-test">Reaktionszeit-Test</a></li>
+          <li><a href="/de/aim-trainer">Ziel- &amp; Gedächtnis-Challenge</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>MousePress</h3>
+        <ul>
+          <li><a href="/de/">Startseite</a></li>
+          <li><a href="/de/about">Über uns</a></li>
+          <li><a href="/de/how-we-test">So testen wir</a></li>
+          <li><a href="/de/contact">Kontakt</a></li>
+          <li><a href="/de/privacy-policy">Datenschutzerklärung</a></li>
+          <li><a href="/de/terms-of-use">Nutzungsbedingungen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MousePress. Alle Tests laufen lokal in deinem Browser.</span>
+      <span>Gebaut für schnelles, übersichtliches Hardware-Testen.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/common.js" defer></script>
+</body>
+</html>
